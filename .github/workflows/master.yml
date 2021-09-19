@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - master
-name: 🚀 Deploy website on push
+name: 🚀 Deploy website master on push
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -17,4 +17,5 @@ jobs:
         server: w00bf3b5.kasserver.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /production.6co.de/
+        server-dir: /123production.6co.de/
+        local-dir: ./public/
