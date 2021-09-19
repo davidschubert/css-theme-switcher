@@ -17,4 +17,4 @@ jobs:
         server: w00bf3b5.kasserver.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /public_html/production.6co.de/
+        server-dir: /production.6co.de/
