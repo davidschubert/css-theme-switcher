@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      - staging
+      - develop
 name: 🚀 Deploy website staging on push
 jobs:
   web-deploy:
