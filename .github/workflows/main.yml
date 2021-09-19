@@ -2,10 +2,10 @@ on:
   push:
     branches:
       - main
-name: 🚀 Deploy website master on push
+name: 🚀 Deploy to production staging on push to main branch
 jobs:
   web-deploy:
-    name: 🎉 Deploy to master
+    name: 🎉 Deploy to production
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code

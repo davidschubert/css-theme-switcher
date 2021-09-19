@@ -2,10 +2,10 @@ on:
   push:
     branches:
       - develop
-name: 🚀 Deploy website staging on push
+name: 🧪 Deploy to staging on push to develop branch
 jobs:
   web-deploy:
-    name: 🎉 Deploy to staging
+    name: 🧪 Deploy to staging
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
