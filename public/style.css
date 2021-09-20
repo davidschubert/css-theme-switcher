@@ -1,6 +1,9 @@
+/* Allgemeines */ 
+
 body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 ul {
@@ -14,9 +17,24 @@ a {
     text-decoration: none;
 }
 
+main {
+    padding: 1.5em;
+}
+
+h3 {
+    margin-top: 2em;
+    font-size: 28px;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+/* Navbar */
+
 .navbar {
     height: 70px;
-    width: 100%;
+    width: 100vw;
     background: #000;
     color: #fff;
 }
@@ -28,23 +46,9 @@ a {
     height: 100%;
 }
 
-header {
-    padding: 1em;
-    background: #222;
-    color: darkorange;
-    margin-bottom: 1em;
-    padding-bottom: 3.5em;
-    text-align: center;
-    clip-path: polygon(50% 0, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
-}
-
-.logo {
-    width: 256px;
-}
-
 .dropdown {
     position: absolute;
-    width: 500px;
+    width: 100%;
     opacity: 0;
     z-index: 2;
     background: darkblue
@@ -62,4 +66,19 @@ header {
 
     box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
     transform:;translateX(-40%)
+}
+
+/* Navbar */
+
+header {
+    padding: 2em;
+    background: #333;
+    color: darkorange;
+    padding-bottom: 7em;
+    text-align: center;
+    clip-path: polygon(50% 0, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+}
+
+.logo {
+    width: 128px;
 }
