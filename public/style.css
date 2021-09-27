@@ -21,8 +21,9 @@ a {
 }
 
 main {
-    min-height: 1000px;
-    padding: 2rem;
+    min-height: 703px;
+    padding: 111px 166px 103px 160px;
+    background-color: #FFC3B7;;
 }
 
 h3 {
@@ -37,7 +38,7 @@ p {
 /* Navbar */
 
 .navbar {
-    height: 3rem;
+    height: 145px;
     width: 100vw;
     box-shadow:
       0 1px 1px hsl(0deg 0% 0% / 0.075),
@@ -114,13 +115,14 @@ p {
 /* Navbar */
 
 header {
-    margin-bottom: 1em;
+    margin: 0;
     padding: 2em;
-    padding-bottom: 7em;
     text-align: center;
     clip-path: polygon(50% 0, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
     
     background: var(--bg-nav);
+    width: 100vw;
+    height: 100vw;
 }
 
 .logo {
@@ -144,21 +146,23 @@ footer {
     width: 36px;
 }
 
+.contentbox {
+    margin: 150px 30px;
+    padding: 0;
+}
+
 .popular-brands {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: center;
     height: 100%;
     border-top: 1px solid #C4D4DA;
 }
 
-.popular-brands li {
-    flex-grow: 1;
-    flex-basis: 10rem;
-    align-items: center;
+.popular-brands > * {
+    flex: 1 1 13rem;
 
-    /* flex: 12em 1 0; */
+
     padding: 4rem 0 4rem 0;
     box-sizing: border-box;
     border: solid 1px #C4D4DA;
@@ -270,3 +274,6 @@ footer {
     animation-iteration-count: infinite; 
     animation-direction: alternate;
 }
+
+
+
