@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS Theme Switcher</title>
+    <title>David Schubert – CSS Theme Switcher</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -12,31 +12,38 @@
 </head>
 <body class="light">
     
-    <nav class="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">Home</li>
-            <li class="nav-item">About</li>
-
-            <!-- Dropdown -->
-            <li class="nav-item has-dropdown">
-                <a href="#">Theme</a>
-                <ul class="dropdown">
-                    <li class="dropdown-item"><a id="light" href="#">light</a></li>
-                    <li class="dropdown-item"><a id="dark" href="#">dark</a></li>
-                    <li class="dropdown-item"><a id="solar" href="#">solarize</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item">Login</li>
-        </ul>
-    </nav>
-
     <header>
         <img src="img/logo.png" class="logo">
+
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">Home</li>
+                <li class="nav-item">work</li>
+                <li class="nav-item">talks</li>
+                <li class="nav-item">about</li>
+                
+                <!-- Dropdown -->
+                <li class="nav-item has-dropdown">
+                    <a href="#">Theme</a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item"><a id="light" href="#">light</a></li>
+                        <li class="dropdown-item"><a id="dark" href="#">dark</a></li>
+                        <li class="dropdown-item"><a id="solar" href="#">solarize</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        
         <h1>CSS Themes<br>Switcher</h1>
         <p>Flutter, Firebase, Javascript, Node.js</p>
     </header>
     
+    <section class="content">
+        <h1>Laura Palmer</h1>
+        <button>View projects</button>
+    </section>
+
     <main>
         <h3>Hello everyone</h3>
         <p>The biggest event of the year for creatives from all across the country. Be there as the design community comes together for provocative speakers, nightly networking receptions. <a href="#">hello@laura.com</a></p>
@@ -51,7 +58,7 @@
         </p>
     </main>
 
-    <section class="contentbox">
+    <section class="content">
         <h2>More than 100 good projects.</h2>
         <ul>
             <li>All</li>
@@ -72,7 +79,7 @@
         <button>More projects</button>
     </section>
 
-    <section class="contentbox">
+    <section class="content">
         <h3>Work experience</h3>
         <div>
             <ul>
@@ -133,8 +140,8 @@
         </div>
     </section>
 
-    <section class="contentbox">
-        <ul class="popular-brands">
+    <section class="content">
+        <ul class="popular-brands grid">
             <li><img src="img/icons/amazon.svg" class="icon"></li>
             <li><img src="img/icons/apple.svg" class="icon"></li>
             <li><img src="img/icons/behance.svg" class="icon"></li>
