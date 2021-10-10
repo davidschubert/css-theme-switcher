@@ -25,6 +25,7 @@ a {
 }
 
 main {
+    overflow: hidden;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -33,6 +34,7 @@ main {
     justify-content: center;
 
     min-height: 910px;
+    height: 100vh;
     padding: 30px 30px;
 
     border-bottom-color: rgba(255, 255, 255, 1);
@@ -67,7 +69,7 @@ main {
 }
 
 .clients {
-    padding: 0;
+    padding: 10px;
 }
 
 .cover {
@@ -275,6 +277,7 @@ footer > nav > ul > li {
 }
 
 section {
+    overflow: hidden;
     min-height: 520px;
     padding: 30px 30px;
     display: grid;
@@ -445,4 +448,72 @@ section:nth-child(even) {
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+/* Extras */
+.hero__arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.video-overlay {
+    margin-top: 70px + 52px;
+}
+
+a {
+    color: inherit;
+    -webkit-transition: opacity .35s ease-in;
+    -o-transition: opacity .35s ease-in;
+    transition: opacity .35s ease-in;
+}   
+
+a {
+    -webkit-transition: opacity 50ms ease-in!important;
+    -o-transition: opacity 50ms ease-in!important;
+    transition: opacity 50ms ease-in!important;
+}s
+
+a {
+    scroll-behavior: smooth;
+}
+
+a.btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 18px;
+    color: #3c4664;
+    border: 1px solid #3c4664;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 23px 48px;
+    border-radius: 45px;
+    white-space: nowrap;
+}
+
+a.btn {
+    padding: 23px 48px;
+    border-radius: 45px;
+}
+
+main .btn {
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    color: #cddbef;
+    background: hsla(0,0%,100%,.15);
+    backdrop-filter: blur(16px);
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    border: none;
+    opacity: 1;
+    transition: all .3s cubic-bezier(.21,-.01,.38,.98) 0ms;
 }
