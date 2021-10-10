@@ -11,6 +11,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 400;
+    -webkit-font-smoothing: antialiased;
     
     color: var(--text);
     background: var(--bg);
@@ -59,12 +60,17 @@ p {
 /* Navbar */
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    top: 0;
-    left: 64px;
-    min-height: 56px;
-    position: absolute;
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+    position: relative;
+    z-index: 2;
+    box-sizing: content-box;
+    pointer-events: auto;
+    letter-spacing: normal;
+    display: block;
+    padding-left: calc(max(22px, env(safe-area-inset-left)));
+    padding-right: calc(max(22px, env(safe-area-inset-right))); 
 }
 
 .navbar ul {
@@ -73,11 +79,19 @@ p {
     margin: 0; 
     padding: 0;
     list-style: none;
+
+    cursor: default;
+    margin: 0 -10px;
+    width: auto;
+    height: 70px;
+    -webkit-box-pack: justify;
+   
+    user-select: none;
 }
 
 .navbar li {
     margin: 0 1em;
-    line-height: 56px;
+    line-height: 70px;
 }
 
 .navbar-nav {
@@ -144,31 +158,44 @@ p {
 
 header {
     position: fixed;
-    z-index: 12;
+    z-index: 9999;
 
-    width: 100vw;
-    height: 56px;
+    min-width: 320px;
+    width: 100%;
+    height: 70px;
     margin: 0;
     padding: 0;
 
-    border-bottom: var(--text) 1px solid;
     background: var(--bg-nav);
+    backdrop-filter: saturate(180%) blur(20px);
     color: var(--text);
 
-    box-shadow:
-      0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075),
-      0 16px 16px hsl(0deg 0% 0% / 0.075);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.subnav {
+    height: 52px;
+    margin-top: 70px;
+    margin-bottom: -122px;
+    background: linear-gradient(to left, rgba(23,103,239,0.85), rgba(20,196,251,0.85));
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.css-sticky {
+    position: sticky;
+    top: 0;
 }
 
 .logo {
     left: 12px;
     top: 12px;
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 46px;
+    height:46px;
     background-color: rgba(0, 0, 0, 1);
 }
 
@@ -290,7 +317,7 @@ section:nth-child(even) {
 
 .light {
     --bg: var(--gray0);
-    --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+    --bg-nav: rgba(240, 240, 240, .8);
     --bg-dropdown: var(--gray0);
     --text: var(--gray6);
     --border-color: var(--blue);
@@ -299,7 +326,7 @@ section:nth-child(even) {
 
 .dark {
     --bg: var(--gray5);
-    --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+    --bg-nav: rgba(29, 29, 31, .72);
     --bg-dropdown: var(--gray6);
     --text: var(--gray0);
     --border-color: var(--purple);

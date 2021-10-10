@@ -7,7 +7,7 @@
     <meta name="description" content="David Schubert – CSS Theme Switcher">
     <meta name="keywords" content="example, html, head, meta">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script type="text/javascript">
         (function (d, u, h, s) {
             h = d.getElementsByTagName('head')[0];
@@ -21,7 +21,21 @@
 <body class="light">
     
     <header>
-        <img src="img/logo.svg" alt="Logo"  width="32" height="32" class="logo">
+        <div class="logo">
+            <svg width="46px" height="46px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="logo-ds-transparent-1200x1200" transform="translate(-200.000000, -400.000000)" fill="#ff0000">
+                        <g id="DS" transform="translate(200.000000, 400.000000)">
+                            <path d="M800,0 L800,200 L600,400 L400,400 L400,200 L600,0 L800,0 Z M200,0 L400,200 L200,400 L0,400 L0,0 L200,0 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <svg viewBox="0 0 800 400" width="46" height="46">
+                <path fill="#12181b" fill-rule="evenodd" d="M800 0v200L600 400H400V200L600 0h200zM200 0l200 200-200 200H0V0h200z"/>
+            </svg>
+        </div>
+        
 
         <nav class="navbar">
             <ul class="navbar-nav">
@@ -42,6 +56,10 @@
         </nav>
     </header>
     
+    <div class="subnav css-sticky">
+        sticky
+    </div>
+    
     <main class="cover">
         <h1>David Schubert</h1>
         <h2>Flutter, Firebase, Javascript, Node.js</h2>
@@ -60,6 +78,15 @@
                 <li><a href="#">dribble</a></li>
             </ul>
         </p>
+        <p>Hier steht ein <abbr title="Hier steht der lange Text">Satz</abbr> mit einem Absatz.</p>
+        <samp>Hier steht Computertext.</samp>
+        <p>Hier steht ein <kbd>CMD</kbd> mit einem Test.</p>
+        <details>
+            <summary>
+                Hier steht die Summary
+            </summary>
+            Outside the title.
+        </details>
     </section>
 
     <section>
