@@ -9,23 +9,67 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 17px;
+    line-height: 25px;
+
+    // ≥992px
+    @include lg {
+        color: #0000ff;
+        font-size: 25px;
+        line-height: 40px;
+    }
 }
 
 h1 {
+    // <576px
     font-weight: 700;
-    font-size: 156px;
     color: #FFFFFF;
+    font-size: 48px;
     letter-spacing: -1.77px;
     text-align: center;
+    
+    // ≥576px
+    @include sm {
+        color: #ff0000;
+    }
+
+    // ≥768px
+    @include md {
+        color: #00ff00;
+        font-size: 80px;
+    }
+
+    // ≥992px
+    @include lg {
+        color: #0000ff;
+        font-size: 110px;
+    }
+
+    // ≥1200px
+    @include xl {
+        color: #00ffff;
+        font-size: 110px;
+    }
+
+    // ≥1400px
+    @include xxl {
+        color: #ff00ff;
+        font-size: 156px;
+    }
 }
 
 h2 {
     font-weight: 700;
-    font-size: 54px;
-    line-height: 58px;
+    font-size: 32px;
+    line-height: 36px;
     text-align: center;
+
+    // ≥992px
+    @include lg {
+        color: #0000ff;
+        font-size: 54px;
+        line-height: 58px;
+    }
 }
 
 p {
