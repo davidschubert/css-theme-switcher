@@ -33,7 +33,7 @@ main {
     align-items: center;
     justify-content: center;
 
-    min-height: 910px;
+    min-height: 548px;
     height: 100vh;
     padding: 30px 30px;
 
@@ -54,6 +54,8 @@ main {
     // ≥992px
     @include lg {
         color: #0000ff;
+        min-height: 910px;
+        height: 100vh;
         padding: 140px 160px;
     }
 

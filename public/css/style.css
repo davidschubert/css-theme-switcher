@@ -127,7 +127,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 910px;
+  min-height: 548px;
   height: 100vh;
   padding: 30px 30px;
   border-bottom-color: white;
@@ -150,6 +150,8 @@ main {
 @media (min-width: 992px) {
   main {
     color: #0000ff;
+    min-height: 910px;
+    height: 100vh;
     padding: 140px 160px;
   }
 }
