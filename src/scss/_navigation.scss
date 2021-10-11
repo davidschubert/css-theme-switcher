@@ -79,7 +79,8 @@ main {
     background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal;
 
     /* Unsplash Image */
-    background: url(https://source.unsplash.com/bQEhoSB7JZc/2560x1440);
+    //background: url(https://source.unsplash.com/bQEhoSB7JZc/2560x1440);
+    background: url('../img/homepage/main/cover.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
