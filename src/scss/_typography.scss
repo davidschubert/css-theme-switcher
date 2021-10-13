@@ -36,13 +36,12 @@ h1 {
     // ≥1200px
     @include xl {
         color: #00ffff;
-        font-size: 110px;
     }
 
     // ≥1400px
     @include xxl {
         color: #ff00ff;
-        font-size: 156px;
+        font-size: 10em;
     }
 }
 

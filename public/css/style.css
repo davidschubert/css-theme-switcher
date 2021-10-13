@@ -138,14 +138,13 @@ h1 {
 @media (min-width: 1200px) {
   h1 {
     color: #00ffff;
-    font-size: 110px;
   }
 }
 
 @media (min-width: 1400px) {
   h1 {
     color: #ff00ff;
-    font-size: 156px;
+    font-size: 10em;
   }
 }
 
@@ -578,6 +577,7 @@ header {
 }
 
 header.hero {
+  position: relative;
   overflow: hidden;
   list-style: none;
   display: -webkit-box;
@@ -592,7 +592,7 @@ header.hero {
   min-height: 548px;
   height: calc(100vh - (70px + 52px));
   max-height: 910px;
-  padding: 30px 30px;
+  padding: 80px 24px;
   border-bottom-color: white;
   border-bottom-style: solid;
   border-bottom-width: 12px;
@@ -613,9 +613,8 @@ header.hero {
 @media (min-width: 992px) {
   header.hero {
     color: #0000ff;
-    min-height: 910px;
+    min-height: calc(910px + (70px + 52px));
     height: calc(100vh - (70px + 52px));
-    padding: 140px 160px;
   }
 }
 
@@ -674,8 +673,7 @@ header.hero {
 .hero__arrow {
   position: absolute;
   bottom: 50px;
-  left: 40px;
-  z-index: 3;
+  right: 40px;
   pointer-events: none;
 }
 
@@ -709,11 +707,6 @@ a.btn {
   padding: 23px 48px;
   border-radius: 45px;
   white-space: nowrap;
-}
-
-a.btn {
-  padding: 23px 48px;
-  border-radius: 45px;
 }
 
 header .btn {

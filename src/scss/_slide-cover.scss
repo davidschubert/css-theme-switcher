@@ -10,6 +10,8 @@ header {
 }
 
 header.hero {
+    position: relative;
+
     overflow: hidden;
     list-style: none;
     display: flex;
@@ -19,7 +21,7 @@ header.hero {
     min-height: 548px;
     height: calc(100vh - (70px + 52px));
     max-height: 910px;
-    padding: 30px 30px;
+    padding: 80px 24px;
 
     border-bottom-color: rgba($color: #fff, $alpha: 1.0);
     border-bottom-style: solid;
@@ -38,9 +40,8 @@ header.hero {
     // ≥992px
     @include lg {
         color: #0000ff;
-        min-height: 910px;
+        min-height: calc(910px + (70px + 52px));
         height: calc(100vh - (70px + 52px));
-        padding: 140px 160px;
     }
 
     // ≥1200px
@@ -100,8 +101,7 @@ header.hero {
 .hero__arrow {
     position: absolute;
     bottom: 50px;
-    left: 40px;
-    z-index: 3;
+    right: 40px;
     pointer-events: none;
 }
 
@@ -137,11 +137,6 @@ a.btn {
     padding: 23px 48px;
     border-radius: 45px;
     white-space: nowrap;
-}
-
-a.btn {
-    padding: 23px 48px;
-    border-radius: 45px;
 }
 
 header .btn {
