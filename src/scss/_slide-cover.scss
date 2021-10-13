@@ -18,6 +18,7 @@ header.hero {
 
     min-height: 548px;
     height: calc(100vh - (70px + 52px));
+    max-height: 910px;
     padding: 30px 30px;
 
     border-bottom-color: rgba($color: #fff, $alpha: 1.0);
@@ -53,7 +54,7 @@ header.hero {
     }
 }
 
-header.cover {
+.no-webp header.cover {
     //background-image: radial-gradient(circle at 50% -20.71%, #ffffa1 0, #f5ffa0 6.25%, #e4ffa0 12.5%, #d2ffa1 18.75%, #bdffa3 25%, #a7fda6 31.25%, #8cfaaa 37.5%, #6cf7af 43.75%, #3cf2b5 50%, #00edbc 56.25%, #00e8c6 62.5%, #00e4d0 68.75%, #00dfdc 75%, #00dbe9 81.25%, #00d7f5 87.5%, #00d3ff 93.75%, #00d0ff 100%);
     
     //background-image: radial-gradient(80.99% 100% at 50% 0%, #00FF0A 0%, #36008E 100%), radial-gradient(50% 123.47% at 50% 50%, #EFE7C8 0%, #36008E 100%), linear-gradient(301.28deg, #FF006B 0%, #48DD9E 100%), linear-gradient(294.84deg, #5A60E4 0%, #D30000 100%), linear-gradient(52.29deg, #000000 0%, #00FF85 100%), radial-gradient(100% 138.69% at 100% 0%, #0007A5 0%, #FF7A00 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
@@ -62,20 +63,18 @@ header.cover {
     /* Unsplash Image */
     //background-image: url('https://source.unsplash.com/bQEhoSB7JZc/2560x1440');
     
-    background-image: url('../img/homepage/main/cover.jpg');
+    background-image: url("../img/homepage/main/cover.jpg"); /* default */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Extras */
-
-
-header.video-overlay {
-    margin-top: 70px + 52px;
+.webp header.cover {
+    background-image: url("../img/homepage/main/cover.webp");
 }
 
-header.hero__arrow {
+/* Extras */
+.hero__arrow {
     position: absolute;
     bottom: 50px;
     left: 40px;
