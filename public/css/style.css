@@ -4,7 +4,14 @@
           box-sizing: border-box;
 }
 
-body {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
@@ -157,6 +164,7 @@ h2 {
   font-size: 32px;
   line-height: 36px;
   text-align: center;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 992px) {
@@ -192,16 +200,13 @@ a {
 main {
   max-width: 2560px;
   margin: 0 auto;
-  padding-top: 122px;
 }
 
 /* section */
 section {
   overflow: hidden;
   min-height: 520px;
-  padding: 30px 30px;
-  display: -ms-grid;
-  display: grid;
+  padding: 80px 24px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -379,7 +384,7 @@ details summary > * {
 }
 
 /* SLIDE NAVIGATION */
-header {
+.nav {
   position: fixed;
   z-index: 9999;
   min-width: 320px;
@@ -397,29 +402,22 @@ header {
   left: 0;
 }
 
-.subnav {
-  z-index: 9998;
-  height: 52px;
-  margin-top: 70px;
-  margin-bottom: -122px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(23, 103, 239, 0.85)), to(rgba(20, 196, 251, 0.85)));
-  background: linear-gradient(to left, rgba(23, 103, 239, 0.85), rgba(20, 196, 251, 0.85));
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-          backdrop-filter: saturate(180%) blur(20px);
-}
-
-.css-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
+/* Logo */
 .logo {
   left: 12px;
   top: 12px;
   position: absolute;
   width: 46px;
   height: 46px;
+}
+
+.logo:hover {
+  -webkit-animation: colorrotate 1s;
+          animation: colorrotate 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 /* Navbar */
@@ -554,20 +552,34 @@ header {
   }
 }
 
-.logo:hover {
-  -webkit-animation: colorrotate 1s;
-          animation: colorrotate 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+.subnav {
+  z-index: 9998;
+  height: 52px;
+  margin-top: 70px;
+  margin-bottom: -122px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(23, 103, 239, 0.85)), to(rgba(20, 196, 251, 0.85)));
+  background: linear-gradient(to left, rgba(23, 103, 239, 0.85), rgba(20, 196, 251, 0.85));
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
+}
+
+.css-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 /* SLIDE COVER */
-.hero {
-  overflow: hidden;
+header {
   padding: 0;
   margin: 0;
+  max-width: 2560px;
+  margin: 0 auto;
+  margin-top: 122px;
+}
+
+header.hero {
+  overflow: hidden;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,19 +599,19 @@ header {
 }
 
 @media (min-width: 576px) {
-  .hero {
+  header.hero {
     color: #ff0000;
   }
 }
 
 @media (min-width: 768px) {
-  .hero {
+  header.hero {
     color: #00ff00;
   }
 }
 
 @media (min-width: 992px) {
-  .hero {
+  header.hero {
     color: #0000ff;
     min-height: 910px;
     height: calc(100vh - (70px + 52px));
@@ -608,18 +620,18 @@ header {
 }
 
 @media (min-width: 1200px) {
-  .hero {
+  header.hero {
     color: #00ffff;
   }
 }
 
 @media (min-width: 1400px) {
-  .hero {
+  header.hero {
     color: #ff00ff;
   }
 }
 
-.cover {
+header.cover {
   /* Unsplash Image */
   background-image: url("../img/homepage/main/cover.jpg");
   background-size: cover;
@@ -628,16 +640,16 @@ header {
 }
 
 /* Extras */
-.hero__arrow {
+header.video-overlay {
+  margin-top: 122px;
+}
+
+header.hero__arrow {
   position: absolute;
   bottom: 50px;
   left: 40px;
   z-index: 3;
   pointer-events: none;
-}
-
-.video-overlay {
-  margin-top: 122px;
 }
 
 a {
@@ -677,7 +689,7 @@ a.btn {
   border-radius: 45px;
 }
 
-main .btn {
+header .btn {
   position: absolute;
   left: 50%;
   bottom: 22px;
@@ -763,7 +775,7 @@ footer > hr {
 }
 
 footer > nav {
-  background-color: rgba(214, 126, 85, 0.85);
+  background-color: rgba(208, 255, 0, 0.85);
 }
 
 footer > nav > ul {
@@ -781,7 +793,7 @@ footer > nav > ul {
 
 footer > nav > ul > li {
   height: 100px;
-  background-color: rgba(255, 100, 38, 0.85);
+  background-color: #ffe926;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

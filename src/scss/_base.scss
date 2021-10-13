@@ -15,7 +15,6 @@ a {
 main {
     max-width: 2560px;
     margin: 0 auto;
-    padding-top: 70px + 52px;
 }
 
 /* section */
@@ -23,8 +22,8 @@ main {
 section {
     overflow: hidden;
     min-height: 520px;
-    padding: 30px 30px;
-    display: grid;
+    padding: 80px 24px;
+ 
     align-items: stretch;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;

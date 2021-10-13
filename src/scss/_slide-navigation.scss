@@ -1,6 +1,6 @@
 /* SLIDE NAVIGATION */
 
-header {
+.nav {
     position: fixed;
     z-index: 9999;
 
@@ -21,20 +21,7 @@ header {
     left: 0;
 }
 
-.subnav {
-    z-index: 9998;
-    height: 52px;
-    margin-top: 70px;
-    margin-bottom: -122px;
-    background: linear-gradient(to left, rgba(23,103,239,0.85), rgba(20,196,251,0.85));
-    backdrop-filter: saturate(180%) blur(20px);
-}
-
-.css-sticky {
-    position: sticky;
-    top: 0;
-}
-
+/* Logo */
 .logo {
     left: 12px;
     top: 12px;
@@ -42,6 +29,14 @@ header {
     width: 46px;
     height: 46px;
 }
+
+.logo:hover {
+    animation: colorrotate 1s;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;
+}
+
+
 
 /* Navbar */
 
@@ -154,8 +149,19 @@ header {
     }
 }
 
-.logo:hover {
-    animation: colorrotate 1s;
-    animation-iteration-count: infinite; 
-    animation-direction: alternate;
+
+
+
+.subnav {
+    z-index: 9998;
+    height: 52px;
+    margin-top: 70px;
+    margin-bottom: -122px;
+    background: linear-gradient(to left, rgba(23,103,239,0.85), rgba(20,196,251,0.85));
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.css-sticky {
+    position: sticky;
+    top: 0;
 }
