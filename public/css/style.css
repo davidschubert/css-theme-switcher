@@ -634,7 +634,6 @@ header.hero {
 .no-webp header.cover {
   /* Unsplash Image */
   background-image: url("../img/homepage/main/cover.jpg");
-  /* default */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -642,6 +641,9 @@ header.hero {
 
 .webp header.cover {
   background-image: url("../img/homepage/main/cover.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Extras */

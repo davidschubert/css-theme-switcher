@@ -63,7 +63,7 @@ header.hero {
     /* Unsplash Image */
     //background-image: url('https://source.unsplash.com/bQEhoSB7JZc/2560x1440');
     
-    background-image: url("../img/homepage/main/cover.jpg"); /* default */
+    background-image: url("../img/homepage/main/cover.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,6 +71,9 @@ header.hero {
 
 .webp header.cover {
     background-image: url("../img/homepage/main/cover.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Extras */
