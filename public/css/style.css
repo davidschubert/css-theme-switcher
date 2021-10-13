@@ -633,17 +633,41 @@ header.hero {
 
 .no-webp header.cover {
   /* Unsplash Image */
-  background-image: url("../img/homepage/main/cover.jpg");
+  background-image: url("../img/homepage/main/cover_small.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+@media (min-width: 768px) {
+  .no-webp header.cover {
+    background-image: url("../img/homepage/main/cover_medium.jpg");
+  }
+}
+
+@media (min-width: 992px) {
+  .no-webp header.cover {
+    background-image: url("../img/homepage/main/cover_large.jpg");
+  }
+}
+
 .webp header.cover {
-  background-image: url("../img/homepage/main/cover.webp");
+  background-image: url("../img/homepage/main/cover_small.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .webp header.cover {
+    background-image: url("../img/homepage/main/cover_medium.webp");
+  }
+}
+
+@media (min-width: 992px) {
+  .webp header.cover {
+    background-image: url("../img/homepage/main/cover_large.webp");
+  }
 }
 
 /* Extras */
