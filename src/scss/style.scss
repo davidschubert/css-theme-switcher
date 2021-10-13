@@ -5,5 +5,14 @@
 @import 'colors';
 @import 'fonts';
 @import 'typography';
-@import 'navigation';
+@import 'base';
 @import 'details_summary';
+
+// project slides
+@import 'slide-navigation';
+@import 'slide-cover';
+@import 'slide-hello';
+@import 'slide-projects';
+@import 'slide-workexperience';
+@import 'slide-clients';
+@import 'slide-footer';

@@ -1,0 +1,32 @@
+/* SLIDE FOOTER */
+
+footer {
+    min-height: 520px;
+    background-color: var(--bg-nav);
+}
+
+footer > hr {
+    border: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+footer > nav {
+    background-color: rgba(214, 126, 85, 0.85);
+}
+
+footer > nav > ul {
+    background-color: rgba(85, 214, 170, .85);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+footer > nav > ul > li {
+    height: 100px;
+    background-color: rgba(255, 100, 38, 0.85);
+    display: flex;
+    align-items: center;
+}

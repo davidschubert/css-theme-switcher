@@ -1,5 +1,5 @@
 /* Variablen */
-$spacing: 24px;
+$spacing: 10px;
 $plus-size: 16px;
 $plus-thickness: 2px;
 $speed: .3s;
@@ -28,15 +28,11 @@ details {
     border-bottom: 1px solid #fff;
     transition: height 300ms ease-in-out;
 
-    p {
-        margin-left: 1em;
-    }
-
     &:last-child {
         border-bottom: 0;
     }
 
-    &__summary, &__content {
+    &__summary {
         padding: $spacing;
     }
 

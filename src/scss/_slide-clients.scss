@@ -1,0 +1,52 @@
+/* SLIDE CLIENTS */
+
+.clients {
+    padding: 10px;
+}
+
+.icon {
+    width: 36px;
+}
+
+.popular-brands {
+    height: 100%;
+    border-top: 1px solid #C4D4DA;
+}
+
+.popular-brands > * {
+    padding: 4rem 0 4rem 0;
+    box-sizing: border-box;
+    border: solid 1px #C4D4DA;
+    margin: -1px -1px 0 -1px;
+    text-align: center;
+
+    background-color: #DBEDF3;
+}
+
+.popular-brand-colors {
+    --brand-color-amazon: #FF9900;
+    --brand-color-apple: #000000;
+    --brand-color-behance: #1769FF;
+    --brand-color-codepen: #000000;
+    --brand-color-discord: #5865F2;
+    --brand-color-facebook: #1877F2;
+    --brand-color-github: #181717;
+    --brand-color-gmail: #EA4335;
+    --brand-color-google: #4285F4;
+    --brand-color-hellofresh: #99CC33;
+    --brand-color-icq: #24FF00;
+    --brand-color-instagram: #E4405F;
+    --brand-color-linkedin: #0A66C2;
+    --brand-color-messenger: #00B2FF;
+    --brand-color-patreon: #FF424D;
+    --brand-color-paypal: #00457C;
+    --brand-color-pinterest: #BD081C;
+    --brand-color-slack: #4A154B;
+    --brand-color-trello: #0052CC;
+    --brand-color-twitch: #9146FF;
+    --brand-color-twitter: #1DA1F2;
+    --brand-color-unsplash: #000000;
+    --brand-color-whatsapp: #25D366;
+    --brand-color-xing: #006567;
+    --brand-color-youtube: #FF0000;
+}

@@ -1,0 +1,77 @@
+/* BASE */
+
+body {
+    background: var(--bg);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+/* main */
+
+main {
+    max-width: 2560px;
+    margin: 0 auto;
+    padding-top: 70px + 52px;
+}
+
+/* section */
+
+section {
+    overflow: hidden;
+    min-height: 520px;
+    padding: 30px 30px;
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    border-bottom-color: rgba(255, 255, 255, 1);
+    border-bottom-style: solid;
+    border-bottom-width: 12px;
+
+    // ≥576px
+    @include sm {
+        color: #ff0000;
+    }
+
+    // ≥768px
+    @include md {
+        color: #00ff00;
+    }
+
+    // ≥992px
+    @include lg {
+        color: #0000ff;
+        padding: 140px 160px;
+    }
+
+    // ≥1200px
+    @include xl {
+        color: #00ffff;
+    }
+
+    // ≥1400px
+    @include xxl {
+        color: #ff00ff;
+    }
+}
+
+.slide:nth-child(odd) {
+    background-image: radial-gradient(circle at 50% -3.03%, #fe8543 0, #ff7946 10%, #ff6c4a 20%, #ff5e4e 30%, #ff4d53 40%, #ff3858 50%, #fb1b5e 60%, #f70066 70%, #f1006f 80%, #eb0079 90%, #e30083 100%);
+}
+
+.slide:nth-child(even) {
+    background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
+}
+
+
+/* grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
