@@ -1,7 +1,7 @@
 /* SLIDE CLIENTS */
 
 .clients {
-    padding: 10px;
+    padding: 0;
 }
 
 .icon {
@@ -10,14 +10,45 @@
 
 .popular-brands {
     height: 100%;
+    background-color: #C4D4DA;
     border-top: 1px solid #C4D4DA;
+    border-bottom: 1px solid #C4D4DA;
+
+    display: grid;
+    grid-gap: 1px 1px;
+    grid-template-columns: 1fr 1fr;
+
+    // ≥576px
+    @include sm {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    // ≥768px
+    @include md {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    // ≥992px
+    @include lg {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    // ≥1200px
+    @include xl {
+        
+    }
+
+    // ≥1400px
+    @include xxl {
+        
+    }
 }
 
 .popular-brands > * {
     padding: 4rem 0 4rem 0;
     box-sizing: border-box;
-    border: solid 1px #C4D4DA;
-    margin: -1px -1px 0 -1px;
+    /*border: solid 1px #C4D4DA;*/
+
     text-align: center;
 
     background-color: #DBEDF3;

@@ -260,14 +260,6 @@ section {
   background-image: linear-gradient(135deg, #F0FF00 10%, #58CFFB 100%);
 }
 
-/* grid */
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
 /* Variablen */
 details[open] summary ~ * {
   -webkit-animation: fadeIn .3s ease-in-out;
@@ -735,7 +727,7 @@ header .btn {
 /* SLIDE WORK EXPERIENCE */
 /* SLIDE CLIENTS */
 .clients {
-  padding: 10px;
+  padding: 0;
 }
 
 .icon {
@@ -744,15 +736,42 @@ header .btn {
 
 .popular-brands {
   height: 100%;
+  background-color: #C4D4DA;
   border-top: 1px solid #C4D4DA;
+  border-bottom: 1px solid #C4D4DA;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1px 1px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 576px) {
+  .popular-brands {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .popular-brands {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .popular-brands {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 .popular-brands > * {
   padding: 4rem 0 4rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: solid 1px #C4D4DA;
-  margin: -1px -1px 0 -1px;
+  /*border: solid 1px #C4D4DA;*/
   text-align: center;
   background-color: #DBEDF3;
 }
