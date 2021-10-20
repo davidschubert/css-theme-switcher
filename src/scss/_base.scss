@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    height: 100vh;
+}
+
 body {
     background: var(--bg);
     transition: background 500ms ease-in-out, color 1000ms ease-in-out;
@@ -32,10 +36,6 @@ section {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 
-    border-bottom-color: rgba(255, 255, 255, 1);
-    border-bottom-style: solid;
-    border-bottom-width: 12px;
-
     // ≥576px
     @include sm {
         color: #ff0000;
@@ -63,10 +63,25 @@ section {
     }
 }
 
+header, section:not(:last-child) {
+    border-bottom-color: var(--bg);
+    border-bottom-style: solid;
+    border-bottom-width: 12px;
+}
+
 .slide:nth-child(odd) {
     background-image: radial-gradient(circle at 50% -3.03%, #fe8543 0, #ff7946 10%, #ff6c4a 20%, #ff5e4e 30%, #ff4d53 40%, #ff3858 50%, #fb1b5e 60%, #f70066 70%, #f1006f 80%, #eb0079 90%, #e30083 100%);
 }
 
 .slide:nth-child(even) {
     background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
+}
+
+
+
+
+/* Styling password fields to get better dots */
+input[type="password"] {
+    font-family: Verdana;
+    letter-spacing: 0.125em;
 }

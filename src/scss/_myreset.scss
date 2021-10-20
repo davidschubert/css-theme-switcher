@@ -36,6 +36,8 @@ a {
 /* Lazy loading images */
 img {
     min-height: 36px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* HTML */

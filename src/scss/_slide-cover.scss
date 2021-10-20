@@ -9,6 +9,8 @@ header {
     margin-top: 70px + 52px;
 }
 
+
+
 header.hero {
     position: relative;
 
@@ -22,10 +24,6 @@ header.hero {
     height: calc(100vh - (70px + 52px));
     max-height: 910px;
     padding: 80px 24px;
-
-    border-bottom-color: rgba($color: #fff, $alpha: 1.0);
-    border-bottom-style: solid;
-    border-bottom-width: 12px;
 
     // ≥576px
     @include sm {

@@ -10,7 +10,7 @@ $gray-light: #ECEFF1;
 $primary: #00ACC1;
 
 
-details[open] summary ~ * {
+.details__faq[open] summary ~ * {
     animation: fadeIn .3s ease-in-out;
 }
   
@@ -19,11 +19,7 @@ details[open] summary ~ * {
     100%  {opacity: 1}
 }
 
-details {
-  user-select: none;
-}
-
-.details {
+.details__faq {
     overflow: hidden;
     border-bottom: 1px solid #fff;
     transition: height 300ms ease-in-out;
@@ -97,10 +93,10 @@ details {
   outline: none;
 }
 
-details summary { 
+.details__faq summary { 
     cursor: pointer;
 }
 
-details summary > * {
+.details__faq summary > * {
     display: inline;
 }

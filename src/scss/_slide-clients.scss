@@ -16,7 +16,7 @@
 
     display: grid;
     grid-gap: 1px 1px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
     // ≥576px
     @include sm {

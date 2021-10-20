@@ -35,6 +35,9 @@ a {
 /* Lazy loading images */
 img {
   min-height: 36px;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* HTML */
@@ -62,7 +65,7 @@ ul {
 
 .light {
   --bg: var(--gray0);
-  --bg-nav: rgba(240, 240, 240, .8);
+  --bg-nav: rgba(255, 255, 255, .72);
   --bg-dropdown: var(--gray0);
   --text: var(--gray6);
   --border-color: var(--blue);
@@ -187,6 +190,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  height: 100vh;
+}
+
 body {
   background: var(--bg);
   -webkit-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
@@ -216,9 +223,6 @@ section {
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  border-bottom-color: white;
-  border-bottom-style: solid;
-  border-bottom-width: 12px;
 }
 
 @media (min-width: 576px) {
@@ -252,6 +256,12 @@ section {
   }
 }
 
+header, section:not(:last-child) {
+  border-bottom-color: var(--bg);
+  border-bottom-style: solid;
+  border-bottom-width: 12px;
+}
+
 .slide:nth-child(odd) {
   background-image: radial-gradient(circle at 50% -3.03%, #fe8543 0, #ff7946 10%, #ff6c4a 20%, #ff5e4e 30%, #ff4d53 40%, #ff3858 50%, #fb1b5e 60%, #f70066 70%, #f1006f 80%, #eb0079 90%, #e30083 100%);
 }
@@ -260,8 +270,14 @@ section {
   background-image: linear-gradient(135deg, #F0FF00 10%, #58CFFB 100%);
 }
 
+/* Styling password fields to get better dots */
+input[type="password"] {
+  font-family: Verdana;
+  letter-spacing: 0.125em;
+}
+
 /* Variablen */
-details[open] summary ~ * {
+.details__faq[open] summary ~ * {
   -webkit-animation: fadeIn .3s ease-in-out;
           animation: fadeIn .3s ease-in-out;
 }
@@ -284,29 +300,22 @@ details[open] summary ~ * {
   }
 }
 
-details {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.details {
+.details__faq {
   overflow: hidden;
   border-bottom: 1px solid #fff;
   -webkit-transition: height 300ms ease-in-out;
   transition: height 300ms ease-in-out;
 }
 
-.details:last-child {
+.details__faq:last-child {
   border-bottom: 0;
 }
 
-.details__summary {
+.details__faq__summary {
   padding: 10px;
 }
 
-.details__summary {
+.details__faq__summary {
   font-size: 24px;
   line-height: 1.16667;
   font-weight: 600;
@@ -325,20 +334,20 @@ details {
   transition: color 0.3s ease-in-out;
 }
 
-[open] > .details__summary {
+[open] > .details__faq__summary {
   color: #00ACC1;
 }
 
-.details__summary::-webkit-details-marker {
+.details__faq__summary::-webkit-details-marker {
   display: none;
 }
 
-.details__summary:before, .details__summary:after {
+.details__faq__summary:before, .details__faq__summary:after {
   content: "";
   position: absolute;
 }
 
-.details__summary:before {
+.details__faq__summary:before {
   right: 13px;
   top: 50%;
   height: 2px;
@@ -347,7 +356,7 @@ details {
   background: #00ACC1;
 }
 
-.details__summary:after {
+.details__faq__summary:after {
   right: 21px;
   top: 50%;
   height: 16px;
@@ -359,7 +368,7 @@ details {
   transition: all 0.3s ease-in-out;
 }
 
-[open] .details__summary:after {
+[open] .details__faq__summary:after {
   opacity: 0;
   -webkit-transform: translateY(25%);
           transform: translateY(25%);
@@ -369,11 +378,11 @@ details {
   outline: none;
 }
 
-details summary {
+.details__faq summary {
   cursor: pointer;
 }
 
-details summary > * {
+.details__faq summary > * {
   display: inline;
 }
 
@@ -589,9 +598,6 @@ header.hero {
   height: calc(100vh - (70px + 52px));
   max-height: 910px;
   padding: 80px 24px;
-  border-bottom-color: white;
-  border-bottom-style: solid;
-  border-bottom-width: 12px;
 }
 
 @media (min-width: 576px) {
@@ -742,8 +748,8 @@ header .btn {
   display: -ms-grid;
   display: grid;
   grid-gap: 1px 1px;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media (min-width: 576px) {
@@ -802,6 +808,214 @@ header .btn {
   --brand-color-whatsapp: #25D366;
   --brand-color-xing: #006567;
   --brand-color-youtube: #FF0000;
+}
+
+/* SLIDE HTML HACKS */
+@-webkit-keyframes colorchange {
+  0% {
+    background: #33CCCC;
+  }
+  20% {
+    background: #33CC36;
+  }
+  40% {
+    background: #B8CC33;
+  }
+  60% {
+    background: #FCCA00;
+  }
+  80% {
+    background: #33CC36;
+  }
+  100% {
+    background: #33CCCC;
+  }
+}
+@keyframes colorchange {
+  0% {
+    background: #33CCCC;
+  }
+  20% {
+    background: #33CC36;
+  }
+  40% {
+    background: #B8CC33;
+  }
+  60% {
+    background: #FCCA00;
+  }
+  80% {
+    background: #33CC36;
+  }
+  100% {
+    background: #33CCCC;
+  }
+}
+
+#htmlhacks {
+  -webkit-animation: colorchange 10s infinite linear;
+          animation: colorchange 10s infinite linear;
+}
+
+/* Modal */
+body.modal-open {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.modal .modal-content .player-container {
+  max-width: 1280px;
+  width: 100vw;
+  min-width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modal-content .player-container .video-player {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.32);
+  aspect-ratio: 16 / 9;
+}
+
+.btn-open-modal {
+  font-size: 15px;
+  line-height: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 23px 48px;
+  border-radius: 45px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  display: inline-block;
+}
+
+#myModalDetails > div.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  height: 100vh;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
+  background: var(--bg-nav);
+  z-index: 11000;
+  overflow: hidden;
+}
+
+#myModalDetails > div.modal-full-viewport {
+  padding: 80px 0;
+}
+
+@media (min-width: 992px) {
+  #myModalDetails > div.modal-full-viewport {
+    padding: 96px 0;
+  }
+}
+
+#myModalDetails .btn-open-modal::-webkit-details-marker {
+  display: none;
+}
+
+#myModalDetails[open] summary::after {
+  content: url("../img/close.svg");
+  position: fixed;
+  z-index: 11001;
+  color: rgba(134, 134, 139, 0.8);
+  text-align: center;
+  top: 20px;
+  left: 20px;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+@media (min-width: 992px) {
+  #myModalDetails[open] summary::after {
+    top: 24px;
+    left: 24px;
+    width: 36px;
+    height: 36px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+/* Measure */
+.measure {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: var(--height);
+  height: var(--measure-height, 100px);
+  z-index: 10992;
+}
+
+.measure::after {
+  content: '';
+  position: absolute;
+  top: .5rem;
+  bottom: .5rem;
+  width: 2rem;
+  right: .5rem;
+  border-top: 2px dashed currentColor;
+  border-right: 2px dashed currentColor;
+  border-bottom: 2px dashed currentColor;
+}
+
+html.is-locked,
+html.is-locked body {
+  /* want to fix the height to the window height */
+  height: calc(var(--window-inner-height) - 1px);
+  /* want to block all overflowing content */
+  overflow: hidden;
+  /* want to exclude padding from the height */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* very basic modal styles for brevity */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: none;
+}
+
+.model.is-open {
+  display: block;
 }
 
 /* SLIDE FOOTER */
