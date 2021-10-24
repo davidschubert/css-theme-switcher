@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /cache/
+Disallow: /inc/
+Disallow: /libs/
+Disallow: /logs/
+Disallow: /module/
+Disallow: /usage/
+Disallow: /frecherbot/
+Disallow: /offline/
+Sitemap: https://www.davidschubert.com/sitemap.xml

@@ -6,7 +6,8 @@
     <title>David Schubert – CSS Theme Switcher</title>
     <meta name="description" content="David Schubert – CSS Theme Switcher">
     <meta name="keywords" content="example, html, head, meta">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="robots" content="none">
     
     <!--<meta name="theme-color" content="#1a5d8d">-->
     <meta name="theme-color" content="#F8B6B8" media="(prefers-color-scheme: light)">
@@ -14,8 +15,8 @@
     
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
-    
-
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="canonical" href="https://www.davidschubert.com/">
 
 </head>
 <body class="light">
@@ -66,15 +67,15 @@
     <main role="main" id="main">
 
         <section class="slide" id="hello">
-            <h2>Hello everyone</h2>
-            <p>The biggest event of the year for creatives from all across the country. Be there as the design community comes together for provocative speakers, nightly networking receptions. <a href="#">hello@laura.com</a></p>
-                <ul>
-                    <li><a href="#">email</a></li>
-                    <li><a href="#">facebook</a></li>
-                    <li><a href="#">instagram</a></li>
-                    <li><a href="#">behance</a></li>
-                    <li><a href="#">dribble</a></li>
-                </ul>
+            <h2 class="roofline">Hello everyone</h2>
+            <p class="hellomsg">The biggest event of the year for creatives from all across the country. Be there as the design community comes together for provocative speakers, nightly networking receptions. <a href="#">hello@davidschubert.com</a></p>
+            <ul class="contact-list">
+                <li><a href="#">email</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">instagram</a></li>
+                <li><a href="#">behance</a></li>
+                <li><a href="#">dribbble</a></li>
+            </ul>
         </section>
 
         <section class="slide" id="projects">
@@ -162,31 +163,31 @@
 
         <section class="slide clients" id="clients">
             <ul class="popular-brands">
-                <li><img src="img/icons/amazon.svg" alt="Amazon" width="36" height="36" class="icon" loading="eager"></li>
-                <li><img src="img/icons/apple.svg" alt="Apple" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/behance.svg" alt="Behance" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/codepen.svg" alt="Codepen" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/discord.svg" alt="Discord" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/facebook.svg" alt="Facebook" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/github.svg" alt="Github" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/gmail.svg" alt="Gmail" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/google.svg" alt="Google" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/hellofresh.svg" alt="Hello Fresh" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/icq.svg" alt="ICQ" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/instagram.svg" alt="Instagram" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/linkedin.svg" alt="LinkedIn" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/messenger.svg" alt="Facebook Messenger" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/patreon.svg" alt="Patreon" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/paypal.svg" alt="PayPal" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/pinterest.svg" alt="Pinterest" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/slack.svg" alt="Slack" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/trello.svg" alt="Trello" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/twitch.svg" alt="Twitch" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/twitter.svg" alt="Twitter" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/unsplash.svg" alt="Unsplash" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/whatsapp.svg" alt="Whatsapp" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/xing.svg" alt="XING" width="36" height="36" class="icon" loading="lazy"></li>
-                <li><img src="img/icons/youtube.svg" alt="YouTube" width="36" height="36" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/amazon.svg" alt="Amazon" title="Amazon" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/apple.svg" alt="Apple" title="Apple" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/behance.svg" alt="Behance" title="Behance" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/codepen.svg" alt="Codepen" title="Codepen" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/discord.svg" alt="Discord" title="Discord" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/facebook.svg" alt="Facebook" title="Facebook" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/github.svg" alt="Github" title="Github" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/gmail.svg" alt="Gmail" title="Gmail" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/google.svg" alt="Google" title="Google" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/hellofresh.svg" alt="Hello Fresh" title="Hello Fresh" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/icq.svg" alt="ICQ" title="ICQ" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/instagram.svg" alt="Instagram" title="Instagram" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/messenger.svg" alt="Facebook Messenger" title="Facebook Messenger" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/patreon.svg" alt="Patreon" title="Patreon" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/paypal.svg" alt="PayPal" title="PayPal" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/pinterest.svg" alt="Pinterest" title="Pinterest" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/slack.svg" alt="Slack" title="Slack" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/trello.svg" alt="Trello" title="Trello" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/twitch.svg" alt="Twitch" title="Twitch" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/twitter.svg" alt="Twitter" title="Twitter" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/unsplash.svg" alt="Unsplash" title="Unsplash" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/whatsapp.svg" alt="Whatsapp" title="Whatsapp" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/xing.svg" alt="XING" title="XING" width="60" height="60" class="icon" loading="lazy"></li>
+                <li><img src="img/icons/youtube.svg" alt="YouTube" title="YouTube" width="60" height="60" class="icon" loading="lazy"></li>
             </ul>
         </section>
 

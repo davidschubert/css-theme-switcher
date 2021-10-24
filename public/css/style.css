@@ -1,4 +1,13 @@
 /* myreset.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -729,6 +738,64 @@ header .btn {
 }
 
 /* SLIDE HELLO */
+h2.roofline {
+  display: inline-block;
+  margin-bottom: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-align: left;
+}
+
+p.hellomsg {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 54px;
+  line-height: 65px;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+p.hellomsg a {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+p.hellomsg a:hover {
+  color: #ffff00;
+  border-bottom: 3px solid #ffff00;
+}
+
+ul.contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  color: #fff;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+ul.contact-list li {
+  margin-bottom: 1rem;
+}
+
+ul.contact-list li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+ul.contact-list li a:hover {
+  color: #ffff00;
+}
+
 /* SLIDE PROJECTS */
 /* SLIDE WORK EXPERIENCE */
 /* SLIDE CLIENTS */
@@ -737,7 +804,7 @@ header .btn {
 }
 
 .icon {
-  width: 36px;
+  width: 60px;
 }
 
 .popular-brands {
