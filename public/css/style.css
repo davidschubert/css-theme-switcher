@@ -771,6 +771,11 @@ p.hellomsg a:hover {
   border-bottom: 3px solid #ffff00;
 }
 
+p.hellomsg a:active {
+  color: #00ffff;
+  border-bottom: 3px solid #00ffff;
+}
+
 ul.contact-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -794,6 +799,10 @@ ul.contact-list li:not(:last-child) {
 
 ul.contact-list li a:hover {
   color: #ffff00;
+}
+
+ul.contact-list li a:active {
+  color: #00ffff;
 }
 
 /* SLIDE PROJECTS */
