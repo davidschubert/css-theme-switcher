@@ -1,0 +1,30 @@
+/*************
+SLIDE CSS GRID
+*************/
+
+.grid-container-beispiel1 {
+    background-color:aquamarine;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px;
+    grid-auto-rows: 300px;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.grid-item {
+    background-color: #0000ff;
+}
+
+.grid-container-beispiel2 {
+    background-color:coral;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-auto-rows: 300px;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    gap: 10px;
+}

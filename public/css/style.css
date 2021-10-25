@@ -738,10 +738,15 @@ header .btn {
 }
 
 /* SLIDE HELLO */
+#hello {
+  background-color: #FFC3B7;
+  background-image: none;
+}
+
 h2.roofline {
   display: inline-block;
   margin-bottom: 50px;
-  color: #fff;
+  color: var(--text);
   text-transform: uppercase;
   font-size: 20px;
   line-height: 20px;
@@ -754,7 +759,7 @@ p.hellomsg {
   display: block;
   overflow: hidden;
   margin-bottom: 50px;
-  color: #fff;
+  color: var(--text);
   font-size: 54px;
   line-height: 65px;
   font-weight: 600;
@@ -762,18 +767,18 @@ p.hellomsg {
 }
 
 p.hellomsg a {
-  color: #fff;
-  border-bottom: 3px solid #fff;
+  color: var(--text);
+  border-bottom: 3px solid var(--text);
 }
 
 p.hellomsg a:hover {
-  color: #ffff00;
-  border-bottom: 3px solid #ffff00;
+  color: var(--bg-solar);
+  border-bottom: 3px solid var(--bg-solar);
 }
 
 p.hellomsg a:active {
-  color: #00ffff;
-  border-bottom: 3px solid #00ffff;
+  color: var(--border-color);
+  border-bottom: 3px solid var(--border-color);
 }
 
 ul.contact-list {
@@ -783,7 +788,7 @@ ul.contact-list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
-  color: #fff;
+  color: var(--text);
   font-size: 30px;
   line-height: 30px;
   font-weight: 600;
@@ -798,11 +803,11 @@ ul.contact-list li:not(:last-child) {
 }
 
 ul.contact-list li a:hover {
-  color: #ffff00;
+  color: var(--bg-solar);
 }
 
 ul.contact-list li a:active {
-  color: #00ffff;
+  color: var(--border-color);
 }
 
 /* SLIDE PROJECTS */
@@ -1092,6 +1097,42 @@ html.is-locked body {
 
 .model.is-open {
   display: block;
+}
+
+/*************
+SLIDE CSS GRID
+*************/
+.grid-container-beispiel1 {
+  background-color: aquamarine;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 200px;
+      grid-template-columns: 200px 200px;
+  -ms-grid-rows: 100px 100px;
+      grid-template-rows: 100px 100px;
+  grid-auto-rows: 300px;
+  grid-auto-flow: column;
+  grid-auto-columns: 200px;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.grid-item {
+  background-color: #0000ff;
+}
+
+.grid-container-beispiel2 {
+  background-color: coral;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 100px 100px;
+      grid-template-rows: 100px 100px;
+  grid-auto-rows: 300px;
+  grid-auto-flow: column;
+  grid-auto-columns: 200px;
+  gap: 10px;
 }
 
 /* SLIDE FOOTER */

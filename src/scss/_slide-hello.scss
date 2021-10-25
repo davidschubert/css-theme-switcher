@@ -1,9 +1,14 @@
 /* SLIDE HELLO */
 
+#hello {
+    background-color: #FFC3B7;
+    background-image: none;
+}
+
 h2.roofline {
     display: inline-block;
     margin-bottom: 50px;
-    color: #fff;
+    color: var(--text);
     text-transform: uppercase;
     font-size: 20px;
     line-height: 20px;
@@ -16,7 +21,7 @@ p.hellomsg {
     display: block;
     overflow: hidden;
     margin-bottom: 50px;
-    color: #fff;
+    color: var(--text);
     font-size: 54px;
     line-height: 65px;
     font-weight: 600;
@@ -24,25 +29,25 @@ p.hellomsg {
 }
 
 p.hellomsg a {
-    color: #fff;
-    border-bottom: 3px solid #fff;
+    color: var(--text);
+    border-bottom: 3px solid var(--text);
 }
 
 p.hellomsg a:hover {
-    color: #ffff00;
-    border-bottom: 3px solid #ffff00;
+    color: var(--bg-solar);
+    border-bottom: 3px solid var(--bg-solar);
 }
 
 p.hellomsg a:active {
-    color: #00ffff;
-    border-bottom: 3px solid #00ffff;
+    color: var(--border-color);
+    border-bottom: 3px solid var(--border-color);
 }
 
 ul.contact-list {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    color: #fff;
+    color: var(--text);
     font-size: 30px;
     line-height: 30px;
     font-weight: 600;
@@ -57,9 +62,9 @@ ul.contact-list li:not(:last-child) {
 }
 
 ul.contact-list li a:hover {
-    color: #ffff00;
+    color: var(--bg-solar);
 }
 
 ul.contact-list li a:active {
-    color: #00ffff;
+    color: var(--border-color);
 }
