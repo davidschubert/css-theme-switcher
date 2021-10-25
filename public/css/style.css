@@ -1102,23 +1102,36 @@ html.is-locked body {
 /*************
 SLIDE CSS GRID
 *************/
+#cssgrid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .grid-container-beispiel1 {
   background-color: aquamarine;
+  margin-bottom: 50px;
+  /* Grid */
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px 200px;
-      grid-template-columns: 200px 200px;
-  -ms-grid-rows: 100px 100px;
-      grid-template-rows: 100px 100px;
-  grid-auto-rows: 300px;
   grid-auto-flow: column;
-  grid-auto-columns: 200px;
+  grid-auto-columns: 335px;
+  grid-auto-rows: 216px;
   gap: 10px;
-  margin-bottom: 50px;
+  /* Horizontal Snap Scrolling */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 
 .grid-item {
   background-color: #0000ff;
+  scroll-snap-align: center;
+  border-radius: 5px;
+}
+
+.grid-item:first-child {
+  margin-left: 20px;
 }
 
 .grid-container-beispiel2 {
@@ -1132,7 +1145,7 @@ SLIDE CSS GRID
   grid-auto-rows: 300px;
   grid-auto-flow: column;
   grid-auto-columns: 200px;
-  gap: 10px;
+  gap: 2px;
 }
 
 /* SLIDE FOOTER */
