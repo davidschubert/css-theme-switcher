@@ -207,6 +207,8 @@ body {
   background: var(--bg);
   -webkit-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
   transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 a {
@@ -891,261 +893,134 @@ ul.contact-list li a:active {
   --brand-color-youtube: #FF0000;
 }
 
-/* SLIDE HTML HACKS */
-@-webkit-keyframes colorchange {
-  0% {
-    background: #33CCCC;
-  }
-  20% {
-    background: #33CC36;
-  }
-  40% {
-    background: #B8CC33;
-  }
-  60% {
-    background: #FCCA00;
-  }
-  80% {
-    background: #33CC36;
-  }
-  100% {
-    background: #33CCCC;
-  }
-}
-@keyframes colorchange {
-  0% {
-    background: #33CCCC;
-  }
-  20% {
-    background: #33CC36;
-  }
-  40% {
-    background: #B8CC33;
-  }
-  60% {
-    background: #FCCA00;
-  }
-  80% {
-    background: #33CC36;
-  }
-  100% {
-    background: #33CCCC;
-  }
-}
-
-#htmlhacks {
-  -webkit-animation: colorchange 10s infinite linear;
-          animation: colorchange 10s infinite linear;
-}
-
-/* Modal */
-body.modal-open {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.modal-content {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.modal .modal-content .player-container {
-  max-width: 1280px;
-  width: 100vw;
-  min-width: 320px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.modal .modal-content .player-container .video-player {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  -ms-flex-item-align: center;
-  align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.32);
-  aspect-ratio: 16 / 9;
-}
-
-.btn-open-modal {
-  font-size: 15px;
-  line-height: 18px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 23px 48px;
-  border-radius: 45px;
-  background: var(--bg);
-  color: var(--text);
-  cursor: pointer;
-  display: inline-block;
-}
-
-#myModalDetails > div.modal {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  display: block;
-  height: 100vh;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-          backdrop-filter: saturate(180%) blur(20px);
-  background: var(--bg-nav);
-  z-index: 11000;
-  overflow: hidden;
-}
-
-#myModalDetails > div.modal-full-viewport {
-  padding: 80px 0;
-}
-
-@media (min-width: 992px) {
-  #myModalDetails > div.modal-full-viewport {
-    padding: 96px 0;
-  }
-}
-
-#myModalDetails .btn-open-modal::-webkit-details-marker {
-  display: none;
-}
-
-#myModalDetails[open] summary::after {
-  content: url("../img/close.svg");
-  position: fixed;
-  z-index: 11001;
-  color: rgba(134, 134, 139, 0.8);
-  text-align: center;
-  top: 20px;
-  left: 20px;
-  width: 32px;
-  height: 32px;
-  font-size: 32px;
-  line-height: 32px;
-}
-
-@media (min-width: 992px) {
-  #myModalDetails[open] summary::after {
-    top: 24px;
-    left: 24px;
-    width: 36px;
-    height: 36px;
-    font-size: 36px;
-    line-height: 36px;
-  }
-}
-
-/* Measure */
-.measure {
-  display: block;
-  position: fixed;
-  right: 0;
-  top: 0;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  height: var(--height);
-  height: var(--measure-height, 100px);
-  z-index: 10992;
-}
-
-.measure::after {
-  content: '';
-  position: absolute;
-  top: .5rem;
-  bottom: .5rem;
-  width: 2rem;
-  right: .5rem;
-  border-top: 2px dashed currentColor;
-  border-right: 2px dashed currentColor;
-  border-bottom: 2px dashed currentColor;
-}
-
-html.is-locked,
-html.is-locked body {
-  /* want to fix the height to the window height */
-  height: calc(var(--window-inner-height) - 1px);
-  /* want to block all overflowing content */
-  overflow: hidden;
-  /* want to exclude padding from the height */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/* very basic modal styles for brevity */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: none;
-}
-
-.model.is-open {
-  display: block;
-}
-
 /*************
 SLIDE CSS GRID
 *************/
 #cssgrid {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: var(--gutter) 0;
+  padding-right: var(--gutter) 0;
+}
+
+.grid-container {
+  background-color: aquamarine;
+  margin-bottom: 50px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-example-one {
+  gap: 10px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 216px;
+}
+
+/*.grid-container-beispiel1:before, .grid-container-beispiel1:after {
+    content: '';
+    width: 20px;
+}*/
+.grid-container div:nth-child(even) {
+  background-color: red;
+  color: #fff;
+}
+
+.grid-container div:nth-child(odd) {
+  background-color: green;
+  color: #fff;
+}
+
+.grid-item {
+  padding: 20px;
+  border-radius: 5px;
+  scroll-snap-align: center;
+  width: 335px;
+}
+
+/*************************
+SLIDE HORIZONTAL SCROLLING
+*************************/
+:root {
+  --gutter: 24px;
+}
+
+#horizontal-scrolling {
+  padding-left: var(--gutter) 0;
+  padding-right: var(--gutter) 0;
 }
 
 .grid-container-beispiel1 {
-  background-color: aquamarine;
+  background-color: orange;
   margin-bottom: 50px;
   /* Grid */
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 335px;
-  grid-auto-rows: 216px;
   gap: 10px;
   /* Horizontal Snap Scrolling */
-  overflow-y: hidden;
   overflow-x: scroll;
+  overflow-y: hidden;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
+  /* Scrolling ausblenden */
+  padding-bottom: 30px;
+  white-space: nowrap;
+  -webkit-clip-path: inset(0 0 30px 0);
+          clip-path: inset(0 0 30px 0);
+  -webkit-overflow-scrolling: touch;
+  padding: 0 50px 30px 50px;
+  scroll-padding-left: 50px;
+  scroll-padding-right: 50px;
 }
 
-.grid-item {
-  background-color: #0000ff;
-  scroll-snap-align: center;
-  border-radius: 5px;
+.grid-container-beispiel1::-webkit-scrollbar {
+  display: none;
 }
 
-.grid-item:first-child {
+.scroll-container:before, .scroll-container:after {
+  content: '';
+  width: 20px;
+}
+
+.1scroll-item:first-child {
   margin-left: 20px;
 }
 
-.grid-container-beispiel2 {
-  background-color: coral;
+.1scroll-item:last-child {
+  background-color: gold;
+  margin-right: 200px;
+}
+
+.hs {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 100px 100px;
-      grid-template-rows: 100px 100px;
-  grid-auto-rows: 300px;
+  gap: 10px;
+  -ms-grid-columns: ()[335px];
+      grid-template-columns: repeat(335px);
   grid-auto-flow: column;
-  grid-auto-columns: 200px;
-  gap: 2px;
+  grid-auto-columns: 335px;
+  grid-auto-rows: 216px;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+.scroll-item {
+  scroll-snap-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* SLIDE FOOTER */
