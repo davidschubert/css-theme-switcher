@@ -19,13 +19,17 @@
     top: 0;
     right: 0;
     left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Logo */
 .logo {
     left: 12px;
     top: 12px;
-    position: absolute;
+    position: relative;
     width: 46px;
     height: 46px;
 }

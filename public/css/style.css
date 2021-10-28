@@ -226,14 +226,17 @@ main {
 section {
   overflow: hidden;
   min-height: 520px;
+  margin: 0 auto;
   padding: 80px 24px;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 576px) {
@@ -279,6 +282,46 @@ header, section:not(:last-child) {
 
 .slide:nth-child(even) {
   background-image: linear-gradient(135deg, #F0FF00 10%, #58CFFB 100%);
+}
+
+.container {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8bc34a), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, #8bc34a 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    min-width: 541px;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    min-width: 721px;
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    min-width: 960px;
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    min-width: 1140px;
+    max-width: 1320px;
+  }
 }
 
 /* Styling password fields to get better dots */
@@ -414,13 +457,22 @@ input[type="password"] {
   top: 0;
   right: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Logo */
 .logo {
   left: 12px;
   top: 12px;
-  position: absolute;
+  position: relative;
   width: 46px;
   height: 46px;
 }

@@ -32,11 +32,13 @@ main {
 section {
     overflow: hidden;
     min-height: 520px;
+    margin: 0 auto;
     padding: 80px 24px;
- 
-    align-items: stretch;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
     // ≥576px
     @include sm {
@@ -77,6 +79,40 @@ header, section:not(:last-child) {
 
 .slide:nth-child(even) {
     background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
+}
+
+
+.container {
+    width: 100%;
+    background: linear-gradient(180deg, #8bc34a 0%, rgba(255, 255, 255, 0) 100%);
+    // ≥576px
+    @include sm {
+        max-width: 540px;
+    }
+
+    // ≥768px
+    @include md {
+        min-width: 541px;
+        max-width: 720px;
+    }
+
+    // ≥992px
+    @include lg {
+        min-width: 721px;
+        max-width: 960px;
+    }
+
+    // ≥1200px
+    @include xl {
+        min-width: 960px;
+        max-width: 1140px;
+    }
+
+    // ≥1400px
+    @include xxl {
+        min-width: 1140px;
+        max-width: 1320px;
+    }
 }
 
 
