@@ -4,13 +4,18 @@
   padding: 0;
 }
 
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
 
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+html, body {
+  height: 100vh;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -195,14 +200,6 @@ p {
 }
 
 /* BASE */
-html {
-  scroll-behavior: smooth;
-}
-
-html, body {
-  height: 100vh;
-}
-
 body {
   background: var(--bg);
   -webkit-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
@@ -661,6 +658,7 @@ header.hero {
   height: calc(100vh - (70px + 52px));
   max-height: 910px;
   padding: 80px 24px;
+  background-color: #1d1d1b;
 }
 
 @media (min-width: 576px) {
@@ -1033,15 +1031,13 @@ SLIDE HORIZONTAL SCROLLING
   width: 20px;
 }
 
-.1scroll-item:first-child {
-  margin-left: 20px;
-}
-
-.1scroll-item:last-child {
-  background-color: gold;
-  margin-right: 200px;
-}
-
+/*.scroll-item:first-child {
+    margin-left: 20px;
+}*/
+/*.scroll-item:last-child {
+    background-color: gold;
+    margin-right: 200px;
+}*/
 .hs {
   display: -ms-grid;
   display: grid;
@@ -1073,6 +1069,143 @@ SLIDE HORIZONTAL SCROLLING
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/*************************
+SLIDE BUTTON HOVER EFFECT
+https://www.youtube.com/watch?v=v37JcsRddBs
+*************************/
+#btn-hover-effect {
+  background-color: #161616;
+  overflow: hidden;
+}
+
+#btn-hover-effect > .container {
+  background-color: #161616;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Monument Extended, sans-serif;
+}
+
+.cursor, .follow {
+  position: absolute;
+  pointer-events: none;
+  width: 0.4em;
+  height: 0.4em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cursor {
+  background: white;
+  border-radius: 50%;
+}
+
+.follow {
+  padding: 2rem;
+  border: 0.1rem solid white;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  border-radius: 100%;
+}
+
+.follow.on-focus {
+  -webkit-transform: translate(-0.55rem, -0.55rem);
+          transform: translate(-0.55rem, -0.55rem);
+  border: 0.1rem solid white;
+  border-radius: 0%;
+  padding: 0.46rem;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  margin: 4rem;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: grey;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: aliceblue;
+}
+
+/* NEUER MAUSZEIGER */
+.mauszeiger {
+  z-index: 999;
+  position: fixed;
+  background: #2696e8;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+          box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+  -webkit-animation: farbwechsel 5s infinite;
+          animation: farbwechsel 5s infinite;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+@-webkit-keyframes farbwechsel {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes farbwechsel {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+.mauszeiger:before {
+  content: '';
+  position: absolute;
+  background: #2696e8;
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  -webkit-transform: translate(-30%, -30%);
+          transform: translate(-30%, -30%);
+  border-radius: 50%;
+}
+
+.debugbox {
+  background-color: yellow;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 250px;
 }
 
 /* SLIDE FOOTER */

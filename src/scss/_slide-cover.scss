@@ -25,6 +25,8 @@ header.hero {
     max-height: 910px;
     padding: 80px 24px;
 
+    background-color: #1d1d1b;
+
     // ≥576px
     @include sm {
         color: #ff0000;
