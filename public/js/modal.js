@@ -1,7 +1,3 @@
-console.info("--scroll-y: " + scrollY);
-console.info("body: " + body);
-
-
 const showDialog = () => {
   document.getElementById('dialog').classList.add('show')
   

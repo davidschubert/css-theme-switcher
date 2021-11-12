@@ -1,21 +1,34 @@
 // commons imports
-@import 'myreset';
-@import 'breakpoints';
-@import 'mixins';
-@import 'colors';
-@import 'fonts';
-@import 'typography';
-@import 'base';
-@import 'details_summary';
+@import 'dsui_myreset';
+
+// my dsui library
+@import 'dsui_breakpoints';
+@import 'dsui_mixins';
+@import 'dsui_colors';
+@import 'dsui_fonts';
+@import 'dsui_typography';
+@import 'dsui_icons';
+@import 'dsui_base';
+@import 'dsui_images';
+@import 'dsui_buttons';
+@import 'dsui_forms';
+@import 'dsui_tabs';
+@import 'dsui_banner';
+@import 'dsui_card';
+@import 'dsui_list';
+@import 'dsui_dropdown';
+
+// extras
+@import 'extra_details_summary';
 
 // project slides
-@import 'slide-navigation';
+@import 'slide-navbar';
 @import 'slide-cover';
 @import 'slide-hello';
 @import 'slide-projects';
 @import 'slide-workexperience';
 @import 'slide-clients';
-//@import 'slide-htmlhacks';
+@import 'slide-htmlhacks';
 @import 'slide-cssgrid';
 @import 'slide-horizontal-scrolling';
 @import 'slide-button-hover-effect';

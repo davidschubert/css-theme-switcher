@@ -49,11 +49,11 @@ var timeout;
 
 //follow cursor on mousemove
 document.addEventListener("mousemove", (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
+  let mousePositionLeft = e.clientX;
+  let mousePositionTop = e.clientY;
 
-  mauszeiger.style.top = y + "px";
-  mauszeiger.style.left = x + "px";
+  mauszeiger.style.left = mousePositionLeft + "px";
+  mauszeiger.style.top = mousePositionTop + "px";
   mauszeiger.style.display = "block";
 
   //cursor effects when mouse stopped
@@ -61,7 +61,7 @@ document.addEventListener("mousemove", (e) => {
     mauszeiger.style.display = "none";
   }
   clearTimeout(timeout);
-  timeout = setTimeout(mouseStopped, 3000);
+  timeout = setTimeout(mouseStopped, 7000);
 });
 
 //cursor effects when mouseout
@@ -93,9 +93,9 @@ function getCoordData(e) {
       html = document.documentElement;
 
   // Alle Variablen festlegen
-  var x = e.clientX;
-  var y = e.clientY;
-  var coor = "Mauszeiger: " + x + " x " + y;
+  var x_coor = e.clientX;
+  var y_coor = e.clientY;
+  var coor = "Mauszeiger: " + x_coor + " x " + y_coor;
 
   // innerHTML festlegen
   const debugbox = document.getElementById("debugbox");

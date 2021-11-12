@@ -5,6 +5,8 @@ body {
     transition: background 500ms ease-in-out, color 1000ms ease-in-out;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    
 }
 
 a {
@@ -14,8 +16,13 @@ a {
 
 /* main */
 
-main {
+.main_2560 {
     max-width: 2560px;
+    margin: 0 auto;
+}
+
+.main_full {
+    width: 100%;
     margin: 0 auto;
 }
 

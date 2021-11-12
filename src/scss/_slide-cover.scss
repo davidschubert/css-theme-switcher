@@ -17,8 +17,10 @@ header.hero {
     overflow: hidden;
     list-style: none;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    
 
     min-height: 548px;
     height: calc(100vh - (70px + 52px));

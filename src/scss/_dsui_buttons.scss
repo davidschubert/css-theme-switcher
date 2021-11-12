@@ -1,0 +1,29 @@
+/* BUTTONS */
+
+:root {
+    --button-bg-color: rgba(60, 100, 91, 0.3);
+    --button-font-size: 1rem;
+    --button-font-color: rgb(255, 255, 255);
+    --button-padding: 1.4375rem 3rem;
+    --button-radius: 3rem;
+    --button-border: none;
+    --button-blur: saturate(180%) blur(16px);
+}
+
+button {
+    position: relative;
+    font-family: var(--main-font-family);
+    background-color: var(--button-bg-color);
+    font-size: var(--button-font-size);
+    color: var(--button-font-color);
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+    border: var(--button-border);
+    backdrop-filter: var(--button-blur);
+    white-space: nowrap;
+    line-height: 100%;
+    display: inline-block;
+    user-select: none;
+    mix-blend-mode: hard-light;
+}
+

@@ -1,0 +1,15 @@
+/* LISTS */
+
+ul li::marker {
+    content: "🧡 ";
+    padding-right: 30px;
+}
+
+ul li {
+    list-style-position: inside;
+}
+
+.listsymbol__gap li span {
+	position: relative;
+	left: 1rem;
+}

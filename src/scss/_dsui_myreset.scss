@@ -1,16 +1,9 @@
 /* myreset.scss */
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
-}
-
-*, *::before, *::after {
     box-sizing: border-box;
-}
-
-html {
-    height: 100%;
 }
 
 html, body {
@@ -18,6 +11,7 @@ html, body {
     scroll-behavior: smooth;
 }
 
+*,
 body,
 h1,
 h2,
@@ -55,7 +49,7 @@ img {
 }
 
 /* HTML */
-ul {
+ol, ul {
     margin: 0;
     padding: 0;
     list-style-type: none;

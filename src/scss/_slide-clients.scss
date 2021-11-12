@@ -9,13 +9,14 @@
 }
 
 .popular-brands {
+    width: 100%;
     height: 100%;
     background-color: #C4D4DA;
     border-top: 1px solid #C4D4DA;
     border-bottom: 1px solid #C4D4DA;
 
     display: grid;
-    grid-gap: 1px 1px;
+    gap: 1px 1px;
     grid-template-columns: 1fr 1fr 1fr;
 
     // ≥576px
@@ -46,11 +47,7 @@
 
 .popular-brands > * {
     padding: 4rem 0 4rem 0;
-    box-sizing: border-box;
-    /*border: solid 1px #C4D4DA;*/
-
     text-align: center;
-
     background-color: #DBEDF3;
 }
 
