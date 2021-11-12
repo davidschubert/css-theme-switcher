@@ -22,27 +22,18 @@
     grid-template-rows: 1fr;
     grid-column-gap: 1.5rem;
     grid-row-gap: 0px;
-}
-
-.workexperience__timeline > li::after {
-    display: inline-block;
-    content: '';
-    border-bottom: 1px solid black;
-    width: 4rem;
-
-    color: #222324;
+    padding: 40px 0 30px 0;
+    border-bottom: 1px solid #CADCE2;
 }
 
 .workexperience__timeline > li > .years {
     grid-area: 1 / 1 / 2 / 2;
-    background-color: aquamarine;
     color: rgba(32, 32, 32, 0.7);
     font-size: 26px;
 }
 
 .workexperience__timeline > li > .description {
     grid-area: 1 / 2 / 2 / 5;
-    background-color: rgb(251, 127, 255);
     color: rgba(32, 32, 32, 1);
     font-weight: bold;
     font-size: 28px;

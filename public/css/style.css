@@ -955,17 +955,8 @@ ul.contact-list li a:active {
       grid-template-rows: 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 0px;
-  height: 80px;
-}
-
-.workexperience__timeline > li > span::after {
-  display: inline-block;
-  content: '';
+  padding: 40px 0 30px 0;
   border-bottom: 1px solid #CADCE2;
-  width: 100%;
-  margin: 0;
-  -webkit-transform: translateY(-1rem);
-          transform: translateY(-1rem);
 }
 
 .workexperience__timeline > li > .years {
@@ -974,7 +965,6 @@ ul.contact-list li a:active {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 2 / 2;
-  background-color: aquamarine;
   color: rgba(32, 32, 32, 0.7);
   font-size: 26px;
 }
@@ -985,7 +975,6 @@ ul.contact-list li a:active {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: 1 / 2 / 2 / 5;
-  background-color: #fb7fff;
   color: #202020;
   font-weight: bold;
   font-size: 28px;
