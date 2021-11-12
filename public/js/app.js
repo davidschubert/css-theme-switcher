@@ -43,7 +43,6 @@ if (cursor) {
 
 
 
-
 const mauszeiger = document.querySelector(".mauszeiger");
 var timeout;
 

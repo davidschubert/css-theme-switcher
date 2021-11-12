@@ -3,14 +3,14 @@
 :root {
     --button-bg-color: rgba(60, 100, 91, 0.3);
     --button-font-size: 1rem;
-    --button-font-color: rgb(255, 255, 255);
+    --button-font-color: rgba(205,219,239, 1);
     --button-padding: 1.4375rem 3rem;
     --button-radius: 3rem;
     --button-border: none;
     --button-blur: saturate(180%) blur(16px);
 }
 
-button {
+.btn-glass {
     position: relative;
     font-family: var(--main-font-family);
     background-color: var(--button-bg-color);
@@ -24,6 +24,4 @@ button {
     line-height: 100%;
     display: inline-block;
     user-select: none;
-    mix-blend-mode: hard-light;
 }
-
