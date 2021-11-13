@@ -1,8 +1,7 @@
 /* LISTS */
 
 ul li::marker {
-    content: "🧡 ";
-    padding-right: 30px;
+    content: "🧡";
 }
 
 ul li {
@@ -12,4 +11,16 @@ ul li {
 .listsymbol__gap li span {
 	position: relative;
 	left: 1rem;
+}
+
+ul.listsymbol__gap li::marker {
+	content: "🍔";
+}
+
+ul.listsymbol__gap li::before {
+    content: "::before";
+    background: lightgray;
+    border-radius: 1ch;
+    padding-inline: 1ch;
+    margin-inline-end: 1ch;
 }

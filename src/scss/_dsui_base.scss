@@ -1,12 +1,16 @@
 /* BASE */
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     background: var(--bg);
     transition: background 500ms ease-in-out, color 1000ms ease-in-out;
     overflow-x: hidden;
     overflow-y: scroll;
-
-    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {

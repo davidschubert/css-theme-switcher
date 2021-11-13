@@ -25,6 +25,11 @@
     --text: var(--gray6);
     --border-color: var(--blue);
     --bg-solar: var(--yellow);
+
+    /* slide clients */
+    --icon-color-clients: #202020;
+    --bg-color-clients: rgba(219,237,243, 1);
+    --border-color-clients: #C4D4DA;
 }
 
 .dark {
@@ -34,6 +39,11 @@
     --text: var(--gray0);
     --border-color: var(--purple);
     --bg-solar: var(--blue);
+
+    /* slide clients */
+    --icon-color-clients: #DBEDF3;
+    --bg-color-clients: rgba(10,10,10, 1);
+    --border-color-clients: #1F1F1F;
 }
 
 .solar {

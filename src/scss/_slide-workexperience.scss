@@ -1,5 +1,13 @@
-/* SLIDE WORK EXPERIENCE */
+/***
+Slide work experience
+***/
 
+#workexperience {
+    background-color: #DBEDF3;
+    background-image: none;
+}
+
+/* Slide Container */
 #workexperience > .container > h2 {
     text-align: left;
     font-size: 1.25rem;
@@ -12,74 +20,101 @@
     display: inline-block;
 }
 
+/* First Part */
 .workexperience__timeline {
-    margin-bottom: 8rem;
+    margin: 0 0 8rem 0;
 }
 
 .workexperience__timeline > li {
+    border-bottom: 1px solid rgba(202,220,226, 1);
+    
     display: grid;
-    grid-template-columns: 1fr repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 0px;
-    padding: 40px 0 30px 0;
-    border-bottom: 1px solid #CADCE2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 5rem;
+
+    padding: 20px 0 15px 0;
+
+    // ≥1200px
+    @include xl {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 0px;
+
+        padding: 40px 0 30px 0;
+    }
 }
 
 .workexperience__timeline > li > .years {
-    grid-area: 1 / 1 / 2 / 2;
     color: rgba(32, 32, 32, 0.7);
     font-size: 26px;
+
+    grid-area: 1 / 1 / 2 / 2;
+
+    // ≥1200px
+    @include xl {
+        grid-area: 1 / 1 / 2 / 2;
+    }
 }
 
 .workexperience__timeline > li > .description {
-    grid-area: 1 / 2 / 2 / 5;
     color: rgba(32, 32, 32, 1);
-    font-weight: bold;
     font-size: 28px;
+    font-weight: bold;
+
+    grid-area: 1 / 2 / 2 / 3;
+
+    // ≥1200px
+    @include xl {
+        grid-area: 1 / 2 / 2 / 5;
+    }
 }
 
+
+/* Second Part */
 .workexperience__details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 5rem;
 
     // ≥576px
     @include sm {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-    }
-
-    // ≥768px
-    @include md {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    // ≥992px
-    @include lg {
-        
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 5rem;
     }
 
     // ≥1200px
     @include xl {
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
+        grid-column-gap: 1.5rem;
         grid-row-gap: 0px;
-    }
-
-    // ≥1400px
-    @include xxl {
-        
     }
 }
 
-.workexperience__details__child {
-    background-color: aquamarine;
+/* Definition List */
+.workexperience__details__list {
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
+.workexperience__details__list dt {
+    color: rgba(32, 32, 32, 0.7);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding-bottom: 2.5rem;
+}
+
+.workexperience__details__list dd {
+    font-size: 1.625rem;
+    color: rgba(32, 32, 32, 1);
+    line-height: 3.25rem;
+}

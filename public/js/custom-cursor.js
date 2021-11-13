@@ -1,3 +1,78 @@
+/*******************
+ BUTTON HOVER EFFECT
+*******************/
+/*document.body.style.cursor = "none";*/
+
+/*var cursor = document.createElement("div");
+cursor.classList.add("cursor");
+document.body.appendChild(cursor);
+
+var follow = document.createElement("div");
+follow.classList.add("follow");
+document.body.appendChild(follow);
+
+function move(obj, event) {
+  obj.style = "";
+  obj.style.top = event.clientY + "px";
+  obj.style.left = event.clientX + "px";
+}
+
+if (cursor) {
+  window.addEventListener("mousemove", function(event) {
+    var e = event;
+    var t = e.target;
+    var f = follow;
+    var c = cursor;
+
+    if (t.tagName == "A") {
+      c.style.backgroundColor = "transparent";
+
+      f.style.top = t.offsetTop + "px";
+      f.style.left = t.offsetLeft + "px";
+      f.style.width = t.clientWidth + "px";
+      f.style.height = t.clientHeight + "px";
+
+      f.classList.add("on-focus");
+    } else {
+      move(c, e);
+      move(f, e);
+      f.classList.remove("on-focus");
+    }
+  })
+}*/
+
+
+/* CUSTOM MAUSZEIGER */
+
+const customcursor = document.querySelector("#ds-cursor");
+var timeout;
+
+// 1. follow cursor on mousemove
+document.addEventListener("mousemove", (e) => {
+  // erhalte die x und y position des mauszeigers
+  let mousePositionLeft = e.clientX;
+  let mousePositionTop = e.clientY;
+
+  // setze style-tag im dom
+  customcursor.style.left = mousePositionLeft + "px";
+  customcursor.style.top = mousePositionTop + "px";
+  customcursor.style.display = "block";
+
+  // 3. cursor effects when mouse stopped
+  function mouseStopped() {
+    customcursor.style.display = "none";
+  }
+
+  clearTimeout(timeout);
+  timeout = setTimeout(mouseStopped, 7000);
+});
+
+// 2. cursor effects when mouseout
+document.addEventListener("mouseout", () => {
+  customcursor.style.display = "none";
+});
+
+
 /*****
 Ausgabe der Werte für die debugbox
 *****/

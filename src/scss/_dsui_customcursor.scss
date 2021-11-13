@@ -1,0 +1,46 @@
+/* CUSTOM CURSOR */
+
+@keyframes cursor_farbwechsel {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#ds-cursor {
+    z-index: 99999999;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: rgba(38,150,232, .3);
+    
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    backdrop-filter: saturate(180%) blur(16px);
+    
+    transform: translate(-50%, -50%);
+    
+    display: none;
+
+    animation: cursor_farbwechsel 6s infinite;
+
+    
+}
+
+#ds-cursor:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    background: rgba(38,150,232, .3);
+    transform: translate(-30%, -30%);
+
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+}
+
