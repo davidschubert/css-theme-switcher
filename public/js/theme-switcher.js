@@ -1,37 +1,34 @@
-// OM Elements
-
-const lightButton = document.getElementById('light');
-const darkButton = document.getElementById('dark');
+// 1.) OM Elements
+const lightButton = document.getElementById('lightmode');
+const darkButton = document.getElementById('darkmode');
 const solarButton = document.getElementById('solar');
 const body = document.body;
 
-// Apply the cached theme on reload
-
+// 2.) Apply the cached theme on reload
 const theme = localStorage.getItem('theme');
 const isSolar = localStorage.getItem('isSolar');
 
 if (theme) {
-  body.classList.add(theme);
+  body.classList.add('theme');
   isSolar && body.classList.add('solar');
 }
 
-// Button Event Handlers
-
+// 3.) Button Event Handlers
+// First Button
 darkButton.onclick = () => {
-  body.classList.replace('light', 'dark');
-  localStorage.setItem('theme', 'dark');
+  body.classList.replace('lightmode', 'darkmode');
+  localStorage.setItem('theme', 'darkmode');
 };
 
+// Second Button
 lightButton.onclick = () => {
-  body.classList.replace('dark', 'light');
-
-  localStorage.setItem('theme', 'light');
+  body.classList.replace('darkmode', 'lightmode');
+  localStorage.setItem('theme', 'lightmode');
 };
 
+// Third Button
 solarButton.onclick = () => {
-
   if (body.classList.contains('solar')) {
-    
     body.classList.remove('solar');
     solarButton.style.cssText = `--bg-solar: var(--yellow);`
 
@@ -40,7 +37,6 @@ solarButton.onclick = () => {
     localStorage.removeItem('isSolar');
 
   } else {
-
     solarButton.style.cssText = `--bg-solar: white;`
 
     body.classList.add('solar');

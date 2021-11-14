@@ -71,9 +71,13 @@ ol, ul {
   --blue: #0084a5;
   --purple: #a82dd1;
   --yellow: #fff565;
+  /* slide clients */
+  --icon-color-clients: var(--gray2);
+  --bg-color-clients: var(--gray6);
+  --border-color-clients: var(--gray5);
 }
 
-.light {
+.lightmode {
   --bg: var(--gray0);
   --bg-nav: rgba(255, 255, 255, .72);
   --bg-dropdown: var(--gray0);
@@ -86,7 +90,7 @@ ol, ul {
   --border-color-clients: #C4D4DA;
 }
 
-.dark {
+.darkmode {
   --bg: var(--gray5);
   --bg-nav: rgba(29, 29, 31, .72);
   --bg-dropdown: var(--gray6);
@@ -107,13 +111,17 @@ ol, ul {
   --gray4: #3ea565;
   --gray5: #005368;
   --gray6: #003d4c;
+  /* slide clients */
+  --icon-color-clients: var(--text);
+  --bg-color-clients: var(--bg-solar);
+  --border-color-clients: var(--border-color);
 }
 
-#dark::before {
+#darkmode::before {
   background: #2a2e35;
 }
 
-#light::before {
+#lightmode::before {
   background: #ffffff;
 }
 
