@@ -44,23 +44,20 @@ if (cursor) {
 
 /* CUSTOM MAUSZEIGER */
 
-const customcursor = document.querySelector("#ds-cursor");
+const customCursor = document.querySelector("#ds-cursor");
+var distanceToCursor = 0; //10?
 var timeout;
 
 // 1. follow cursor on mousemove
 document.addEventListener("mousemove", (e) => {
-  // erhalte die x und y position des mauszeigers
-  let mousePositionLeft = e.clientX;
-  let mousePositionTop = e.clientY;
-
   // setze style-tag im dom
-  customcursor.style.left = mousePositionLeft + "px";
-  customcursor.style.top = mousePositionTop + "px";
-  customcursor.style.display = "block";
+  customCursor.style.left = (e.clientX - distanceToCursor) + "px";
+  customCursor.style.top = (e.clientY - distanceToCursor) + "px";
+  customCursor.style.display = "block";
 
   // 3. cursor effects when mouse stopped
   function mouseStopped() {
-    customcursor.style.display = "none";
+    customCursor.style.display = "none";
   }
 
   clearTimeout(timeout);
@@ -69,7 +66,7 @@ document.addEventListener("mousemove", (e) => {
 
 // 2. cursor effects when mouseout
 document.addEventListener("mouseout", () => {
-  customcursor.style.display = "none";
+  customCursor.style.display = "none";
 });
 
 

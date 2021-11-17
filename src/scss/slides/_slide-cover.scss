@@ -124,7 +124,7 @@ a {
     scroll-behavior: smooth;
 }
 
-a.btn {
+a.glassbutton {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -141,13 +141,13 @@ a.btn {
     white-space: nowrap;
 }
 
-header .btn {
+header .glassbutton {
     position: absolute;
     left: 50%;
     bottom: 22px;
     color: #cddbef;
     background: hsla(0,0%,100%,.15);
-    backdrop-filter: blur(16px);
+    backdrop-filter: var(--main-bg-blur);
     transform: translate(-50%,-50%);
     z-index: 5;
     border: none;

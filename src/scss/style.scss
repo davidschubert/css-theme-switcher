@@ -1,36 +1,39 @@
-// commons imports
-@import 'dsui_myreset';
+/* Reset everything */
+@import 'dsui/dsui_myreset';
 
-// my dsui library
-@import 'dsui_breakpoints';
-@import 'dsui_mixins';
-@import 'dsui_colors';
-@import 'dsui_fonts';
-@import 'dsui_typography';
-@import 'dsui_icons';
-@import 'dsui_base';
-@import 'dsui_images';
-@import 'dsui_buttons';
-@import 'dsui_forms';
-@import 'dsui_tabs';
-@import 'dsui_banner';
-@import 'dsui_card';
-@import 'dsui_list';
-@import 'dsui_dropdown';
-@import 'dsui_customcursor';
+/* DS UI Library */
+@import 'dsui/dsui_breakpoints';
+@import 'dsui/dsui_mixins';
+@import 'dsui/dsui_colors';
+@import 'dsui/dsui_fonts';
+@import 'dsui/dsui_typography';
+@import 'dsui/dsui_icons';
+@import 'dsui/dsui_base';
+@import 'dsui/dsui_images';
+@import 'dsui/dsui_buttons';
+@import 'dsui/dsui_forms';
+@import 'dsui/dsui_tabs';
+@import 'dsui/dsui_banner';
+@import 'dsui/dsui_card';
+@import 'dsui/dsui_list';
+@import 'dsui/dsui_dropdown';
+@import 'dsui/dsui_customcursor';
 
-// extras
-@import 'extra_details_summary';
+/* Extras */
+@import 'dsui/extra_details_summary';
 
-// project slides
-@import 'slide-navbar';
-@import 'slide-cover';
-@import 'slide-hello';
-@import 'slide-projects';
-@import 'slide-workexperience';
-@import 'slide-clients';
-@import 'slide-htmlhacks';
-@import 'slide-cssgrid';
-@import 'slide-horizontal-scrolling';
-@import 'slide-button-hover-effect';
-@import 'slide-footer';
+/* Slides */
+@import 'slides/slide-navbar';
+@import 'slides/slide-cover';
+@import 'slides/slide-hello';
+@import 'slides/slide-projects';
+@import 'slides/slide-workexperience';
+@import 'slides/slide-clients';
+@import 'slides/slide-htmlhacks';
+@import 'slides/slide-cssgrid';
+@import 'slides/slide-horizontal-scrolling';
+@import 'slides/slide-button-hover-effect';
+@import 'slides/slide-footer';
+
+/* Debugging */
+@import 'dsui/dsui_debugging';

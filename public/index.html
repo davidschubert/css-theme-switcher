@@ -9,9 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="robots" content="all">
     
-    <!--<meta name="theme-color" content="#1a5d8d">-->
-    <meta name="theme-color" content="#F8B6B8" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0038FF" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="lightblue" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="darkblue" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="red">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
     
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
@@ -25,13 +29,15 @@
 
     <div class="subnav css-sticky" role="navigation" aria-label="Sub navigation">Sticky Subnav</div>
 
-    <header role="banner" class="hero cover" id="cover">
+    <header class="hero cover" id="cover">
         
         <h1>Lorem ipsum</h1>
 
-        <button class="btn-glass">View projects</button>
+        <button class="btn btn-glass btn-sm">Small Button</button>
+        <button class="btn btn-glass">Normal Button</button>
+        <button class="btn btn-glass btn-lg">Large Button</button>
 
-        <a href="#" class="btn">View projects</a>
+        <a href="#" class="glassbutton">View projects</a>
         
         <svg class="hero__arrow" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 28.5V3M4.5 17.5L16.073 29 28 17.5" stroke="#ff0000" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
@@ -39,21 +45,23 @@
 
     </header>
 
-    <nav class="nav" role="navigation" aria-label="Main navigation">
+    <nav id="ds-globalnav" aria-label="Globale Navigation">
 
-        <div class="container">
-            <div class="logo">
-                <svg viewBox="0 0 800 400" width="46" height="46">
-                    <path fill="#ff0000" fill-rule="evenodd" d="M800 0v200L600 400H400V200L600 0h200zM200 0l200 200-200 200H0V0h200z"/>
-                </svg>
+        <div class="nav-container">
+
+            <div class="brandlogo">
+                <svg viewBox="0 0 800 400" width="46" height="46"><path fill="#ff0000" fill-rule="evenodd" d="M800 0v200L600 400H400V200L600 0h200zM200 0l200 200-200 200H0V0h200z"/></svg>
             </div>
+
+            <div><button type="button" class="btn btn-glass btn-sm">Send me a message</button></div>
     
-            <div class="navbar">
+            <!--<div class="navbar">
                 <ul class="navbar-nav">
+                    <li><a href="#"><svg viewBox="0 0 800 400" width="46" height="46"><path fill="#ff0000" fill-rule="evenodd" d="M800 0v200L600 400H400V200L600 0h200zM200 0l200 200-200 200H0V0h200z"/></svg></a></li>
                     <li class="nav-item"><a href="intro.html" class="item">work</a></li>
                     <li class="nav-item"><a href="#projects" class="item">talks</a></li>
                     <li class="nav-item"><a href="#workexperience" class="item">about</a></li>
-                    <!-- Dropdown -->
+                    
                     <li class="nav-item has-dropdown">
                         <a href="#">settings</a>
                         <ul class="dropdown">
@@ -62,17 +70,19 @@
                             <li class="dropdown-item"><a id="solar" href="#">solarize</a></li>
                         </ul>
                     </li>
+
                 </ul>
-            </div>
+            </div>-->
+
         </div>
 
     </nav>
    
-    <main id="main" class="main_2560" role="main">
+    <main id="main" class="main_2560">
 
         <section class="slide hello" id="hello">
 
-            <div class="container">
+            <div class="content-container">
                 <h2 class="roofline">Hello everyone</h2>
                 <p class="hellomsg">The biggest event of the year for creatives from all across the country. Be there as the design community comes together for provocative speakers, nightly networking receptions. <a href="#">hello@loremipsum dolor.com</a></p>
                 <ul class="contact-list">
@@ -88,7 +98,7 @@
 
         <section class="slide" id="projects">
             
-            <div class="container">
+            <div class="content-container">
                 <h2>More than 100 good projects.</h2>
                 <ul>
                     <li>All</li>
@@ -113,7 +123,7 @@
 
         <section class="slide" id="workexperience">
             
-            <div class="container">
+            <div class="content-container">
                 <h2>Work experience</h2>
 
                 <ul class="workexperience__timeline">
@@ -169,9 +179,9 @@
             
         </section>
         
-        <section class="slide clients" id="clients">
+        <div class="slide clients" id="clients">
             <ul class="popular-brands">
-                <li><svg width="60" height="60" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Amazon</title><path class="svg-icon-color" d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/></svg></li>
+                <li><svg width="60" height="60" role="img" viewBox="0 0 24 24"><title>Amazon</title><path class="svg-icon-color" d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/></svg></li>
                 <li><svg width="60" height="60" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Apple</title><path class="svg-icon-color" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></li>
                 <li><svg width="60" height="60" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Behance</title><path class="svg-icon-color" d="M0 4.4804V19.243h7.1554c.6613 0 1.3078-.0832 1.9297-.248.6288-.1654 1.1905-.4203 1.6792-.7661.485-.3431.8784-.788 1.1677-1.3369.2862-.542.4294-1.187.4294-1.9354 0-.9232-.219-1.7109-.6675-2.369-.446-.6542-1.1187-1.1139-2.0274-1.3746.6674-.3161 1.1658-.7227 1.506-1.2177.3371-.4967.5058-1.1174.5058-1.8607 0-.6873-.1127-1.2677-.3375-1.7318-.2306-.4709-.552-.8452-.9632-1.1266-.4176-.2808-.912-.4857-1.4912-.6085-.5827-.1261-1.22-.1872-1.9264-.1872zm15.6674.9903v1.4567h5.9844V5.4707zM3.2509 6.9947h3.0407c.2873 0 .5683.0204.8359.0731.2728.0466.508.134.716.2595.2096.1205.3754.293.501.5132.1208.2203.1806.5038.1806.8474 0 .6189-.1811 1.0702-.5551 1.3426-.3778.2775-.8543.4147-1.4304.4147H3.2509zm15.545 1.2564c-.819 0-1.5587.1462-2.2294.436-.6705.2904-1.2463.6875-1.7318 1.1915-.4846.5011-.8535 1.0986-1.12 1.7909-.2612.69-.3942 1.4366-.3942 2.236 0 .8268.1284 1.5891.3835 2.2786.258.6923.6198 1.2822 1.0856 1.781.478.4967 1.046.8784 1.726 1.1497.6806.269 1.4382.4048 2.2803.4048 1.208 0 2.2446-.2771 3.0949-.8326.8599-.5528 1.4902-1.471 1.9058-2.7574h-2.585c-.1.3307-.359.649-.784.9467-.4295.2988-.9417.4492-1.534.4492-.8233 0-1.4588-.2168-1.8985-.6462-.4412-.4294-.7267-1.2289-.7267-2.0742h7.713c.0552-.8291-.0122-1.6218-.2045-2.3797-.1938-.7601-.5033-1.4365-.9393-2.029-.4355-.5931-.9904-1.0667-1.667-1.4165-.6788-.3543-1.4703-.5288-2.3747-.5288zm-.0887 2.217c.7209 0 1.3126.2092 1.6612.5954.3503.389.6065.9432.6766 1.6915h-4.7766c.0136-.2085.058-.4444.1339-.7045.0749-.2668.2039-.5164.3933-.753.1905-.2326.4402-.431.744-.5896.3109-.1608.6986-.2397 1.1676-.2397zM3.251 12.664h3.5334c.6996 0 1.2682.1602 1.6948.4836.4259.328.6405.8685.6405 1.6292 0 .3885-.0632.7094-.1946.9566-.131.2495-.3106.4466-.528.5896-.2172.1491-.4753.2498-.7661.3137-.2862.0639-.5905.092-.9115.092H3.2509z"/></svg></li>
                 <li><svg width="60" height="60" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CodePen</title><path class="svg-icon-color" d="M18.144 13.067v-2.134L16.55 12zm1.276 1.194a.628.628 0 01-.006.083l-.005.028-.011.053-.01.031c-.005.016-.01.031-.017.047l-.014.03a.78.78 0 01-.021.043l-.019.03a.57.57 0 01-.08.1l-.026.025a.602.602 0 01-.036.03l-.029.022-.01.008-6.782 4.522a.637.637 0 01-.708 0L4.864 14.79l-.01-.008a.599.599 0 01-.065-.052l-.026-.025-.032-.034-.021-.028a.588.588 0 01-.067-.11l-.014-.031a.644.644 0 01-.017-.047l-.01-.03c-.004-.018-.008-.036-.01-.054l-.006-.028a.628.628 0 01-.006-.083V9.739c0-.028.002-.055.006-.083l.005-.027.011-.054.01-.03a.574.574 0 01.12-.217l.031-.034.026-.025a.62.62 0 01.065-.052l.01-.008 6.782-4.521a.638.638 0 01.708 0l6.782 4.521.01.008.03.022.035.03c.01.008.017.016.026.025a.545.545 0 01.08.1l.019.03a.633.633 0 01.021.043l.014.03c.007.016.012.032.017.047l.01.031c.004.018.008.036.01.054l.006.027a.619.619 0 01.006.083zM12 0C5.373 0 0 5.372 0 12 0 18.627 5.373 24 12 24c6.628 0 12-5.372 12-12 0-6.627-5.372-12-12-12m0 10.492L9.745 12 12 13.51 14.255 12zm.638 4.124v2.975l4.996-3.33-2.232-1.493zm-6.272-.356l4.996 3.33v-2.974l-2.764-1.849zm11.268-4.52l-4.996-3.33v2.974l2.764 1.85zm-6.272-.356V6.41L6.366 9.74l2.232 1.493zm-5.506 1.549v2.134L7.45 12Z"/></svg></li>
@@ -197,10 +207,10 @@
                 <li><svg width="60" height="60" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Xing</title><path class="svg-icon-color" d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg></li>
                 <li><svg width="60" height="60" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path class="svg-icon-color" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></li>
             </ul>
-        </section>
+        </div>
 
         <section class="slide" id="htmlhacks">
-            <div class="container">
+            <div class="content-container">
                 <h2>HTML Hacks</h2>
                 <p>Hier steht ein <abbr title="Hier steht der lange Text">Satz</abbr> mit einem Absatz.</p>
                 <samp>Hier steht Computertext.</samp>
@@ -226,7 +236,7 @@
         </section>
 
         <section class="slide" id="faq">
-            <div class="container">
+            <div class="content-container">
                 <h2>Frequently Asked Questions</h2>
                 <details class="details__faq">
                     <summary class="details__faq__summary">What is Apple Arcade?</summary>
@@ -248,7 +258,7 @@
 
         <section class="slide" id="cssgrid">
             
-            <div class="container">
+            <div class="content-container">
                 <h2>CSS Grid</h2>
                 <p>Cheatsheet für <strong>CSS Grid</strong></p>
                 
@@ -267,7 +277,7 @@
         </section>
 
         <section class="slide" id="horizontal-scrolling">
-            <div class="container">
+            <div class="content-container">
                 <h2>Horizontal Scrolling</h2>
                 <p>Cheatsheet für <strong>horizontales Scrollverhalten</strong></p>
     
@@ -293,7 +303,8 @@
         </section>
 
         <section class="slide" id="btn-hover-effect">
-            <div class="container">
+            <div class="content-container">
+                <h2>Button Hover effect</h2>
                 <!-- START btn hover effect -->
                 <a href="#" class="button">Offbeat</a>
                 <a href="#" class="button">Asterisks</a>
@@ -305,10 +316,10 @@
         
     </main>
 
-    <footer role="contentinfo">
+    <footer>
         <address>© 1998-2013 SELFHTML <a href="#">Impressum</a> Software: Classic Forum 3.4</address>
         <hr>
-        <nav id="footernav" role="navigation" aria-label="Footer navigation">
+        <nav id="footernav" aria-label="Footer navigation">
             <ul>
                 <li><a href="#">facebook</a></li>
                 <li><a href="#">instagram</a></li>

@@ -1,8 +1,30 @@
 /* COLORS */
 
-/* Themes */
+html {
+    color-scheme: light dark;
+}
 
+/* Themes */
 :root {
+    --main-bg-blur: saturate(180%) blur(16px);
+
+    --main-bg-color: lightblue;
+    --main-text-color: darkblue;
+
+    --c-bg: yellow;
+    --c-text: darkblue;
+    --c-linktext: blue;
+    --c-visitedtext: purple;
+    --c-activetext: red;
+    --c-border: green;
+
+    --c-buttonface: gray;
+    --c-buttontext: black;
+    --c-buttonborder: lightgray;
+    --c-field: yellow;
+    --c-fieldtext: darkblue;
+
+    // andere Farben
     --main-color: red;
 
     --background: rgba(85, 214, 170, .85);
@@ -21,6 +43,13 @@
     --icon-color-clients: var(--gray2);
     --bg-color-clients: var(--gray6);
     --border-color-clients: var(--gray5);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: darkblue;
+        --main-text-color: lightblue;
+    }
 }
 
 .lightmode {

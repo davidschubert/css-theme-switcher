@@ -15,36 +15,33 @@ body {
 
 h1 {
     // <576px
-    color: #FFFFFF;
+    color: var(--text);
     font-size: 48px;
     letter-spacing: -1.77px;
     text-align: center;
     
     // ≥576px
     @include sm {
-        color: #ff0000;
+        font-size: 48px;
     }
 
     // ≥768px
     @include md {
-        color: #00ff00;
         font-size: 80px;
     }
 
     // ≥992px
     @include lg {
-        color: #0000ff;
         font-size: 110px;
     }
 
     // ≥1200px
     @include xl {
-        color: #00ffff;
+        font-size: 110px;
     }
 
     // ≥1400px
     @include xxl {
-        color: #ff00ff;
         font-size: 10em;
     }
 }

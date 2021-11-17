@@ -70,7 +70,7 @@ section {
     }
 }
 
-header, section:not(:last-child) {
+header, section:not(:last-child), .clients {
     border-bottom-color: var(--bg);
     border-bottom-style: solid;
     border-bottom-width: 12px;
@@ -85,9 +85,9 @@ header, section:not(:last-child) {
 }
 
 
-.container {
+.nav-container, .content-container {
     width: 100%;
-    background: linear-gradient(180deg, #8bc34a 0%, rgba(255, 255, 255, 0) 100%);
+
     // ≥576px
     @include sm {
         max-width: 540px;
@@ -117,8 +117,6 @@ header, section:not(:last-child) {
         max-width: 1320px;
     }
 }
-
-
 
 
 /* Styling password fields to get better dots */

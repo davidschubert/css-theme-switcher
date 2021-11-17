@@ -1,0 +1,36 @@
+/* DEBUGGING */
+
+* {
+    background-color: rgba(0,255,255, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(255,0,255, 0.6);
+}
+
+h1 {
+    // <576px
+    color: #FFFFFF;
+    
+    // ≥576px
+    @include sm {
+        color: #ff0000;
+    }
+
+    // ≥768px
+    @include md {
+        color: #00ff00;
+    }
+
+    // ≥992px
+    @include lg {
+        color: #0000ff;
+    }
+
+    // ≥1200px
+    @include xl {
+        color: #00ffff;
+    }
+
+    // ≥1400px
+    @include xxl {
+        color: #ff00ff;
+    }
+}
