@@ -34,3 +34,20 @@ h1 {
         color: #ff00ff;
     }
 }
+
+/* Debugbox */
+.debugbox {
+    display: block;
+    z-index:9999999;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    width:250px;
+    height: 150px;
+    overflow-y: scroll;
+    scroll-behavior: none;
+
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}

@@ -6,10 +6,9 @@
     --button-border-color: #00ff00;
     --button-border-size: 0px solid;
 
-    --button-font-size: 1rem;
-    
-    --button-padding: 0.375rem 0.75rem;
-    --button-radius: 0.25rem;
+    --button-padding: 8px 16px;
+    --button-font-size: 17px;
+    --button-radius: 980px;
 }
 
 .btn {
@@ -28,6 +27,7 @@
     padding: var(--button-padding);
     font-size: var(--button-font-size);
     border-radius: var(--button-radius);
+    min-width: 26px;
 
     &-glass {
         font-family: var(--main-font-family);
@@ -43,15 +43,14 @@
     }
 
     &-sm {
-        color: #00ff00;
-        padding: .25rem 0.5rem;
-        font-size: .875rem;
-        border-radius: 0.2rem;
+        padding: 4px 11px;
+        font-size: 12px;
+        min-width: 23px;
     }
     &-lg {
-        color: red;
-        padding: 0.5rem 1rem;
-        font-size: 1.25rem;
-        border-radius: 0.3rem;
+        font-weight: 600;
+        padding: 18px 31px;
+        font-size: 17px;
+        min-width: 28px;
     }
 }

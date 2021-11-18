@@ -9,8 +9,6 @@ header {
     margin-top: 70px + 52px;
 }
 
-
-
 header.hero {
     position: relative;
 
@@ -54,6 +52,12 @@ header.hero {
     // ≥1400px
     @include xxl {
         color: #ff00ff;
+    }
+
+    .cta {
+        background-color: #fff;
+        color: #1d1d1f;
+        margin-top: 25px;
     }
 }
 
@@ -154,3 +158,4 @@ header .glassbutton {
     opacity: 1;
     transition: all .3s cubic-bezier(.21,-.01,.38,.98) 0ms;
 }
+
