@@ -1,9 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Combined Shape</title>
-    <g id="Logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-200.000000, -400.000000)" fill="#FFFFFF">
-            <path d="M1000,400 L1000,600 L800,800 L600,800 L600,600 L800,400 L1000,400 Z M400,400 L600,600 L400,800 L200,800 L200,400 L400,400 Z" id="Combined-Shape"></path>
-        </g>
-    </g>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:069614cce907523b44d31803053b912d9af2d76d5301084e02e8723540d20a22
+size 595
