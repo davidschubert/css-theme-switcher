@@ -1,3 +1,6 @@
 .DS_Store
+public/img/
+public/media/
+public/fonts/
 # Local Netlify folder
 .netlify
