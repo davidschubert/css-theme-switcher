@@ -99,7 +99,7 @@
         height: 100%;
 
         li:not(:last-child) {
-            margin-right: 4em;
+            margin-right: 1em;
         }
     }
 }
@@ -118,12 +118,12 @@
     border-bottom-left-radius: 8px;
     
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     margin-top: 27px;
     padding: 1rem;
 
-    width: 170px;
+    max-width: 320px;
 
     box-shadow:
       0 1px 1px hsla(0, 0%, 0%, .075),
@@ -132,7 +132,7 @@
       0 8px 8px hsla(0, 0%, 0%, .075),
       0 16px 16px hsla(0, 0%, 0%, .075);
     
-    transform: translateX(-1rem);
+    transform: translateX(-13rem);
     transition: opacity .15s ease-out;
 
     .dropdown-item {

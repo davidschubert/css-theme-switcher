@@ -34,10 +34,12 @@ html {
     --gray3: #6c7983;
     --gray4: #454e56;
     --gray5: #2a2e35;
-    --gray6: #12181b;
+    --gray6: #202020;
     --blue: #0084a5;
     --purple: #a82dd1;
     --yellow: #fff565;
+
+    
 
     /* slide clients */
     --icon-color-clients: var(--gray2);
@@ -60,6 +62,9 @@ html {
     --border-color: var(--blue);
     --bg-solar: var(--yellow);
 
+    /* slide hello */
+    --c-mirror-bg1: #FFC3B7;
+
     /* slide clients */
     --icon-color-clients: #202020;
     --bg-color-clients: rgba(219,237,243, 1);
@@ -73,6 +78,9 @@ html {
     --text: var(--gray0);
     --border-color: var(--purple);
     --bg-solar: var(--blue);
+
+    /* slide hello */
+    --c-mirror-bg1: #202020;
 
     /* slide clients */
     --icon-color-clients: #DBEDF3;

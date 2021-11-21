@@ -3,7 +3,7 @@ Slide work experience
 ***/
 
 #workexperience {
-    background-color: #DBEDF3;
+    background-color: var(--bg-color-clients);
     background-image: none;
 }
 
@@ -14,7 +14,7 @@ Slide work experience
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 0.25rem;
-    color: #202020;
+    color: var(--text);
     margin: 0 0 4rem 0;
     padding: 0;
     display: inline-block;
@@ -26,7 +26,7 @@ Slide work experience
 }
 
 .workexperience__timeline > li {
-    border-bottom: 1px solid rgba(202,220,226, 1);
+    border-bottom: 1px solid var(--border-color-clients);
     
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -60,7 +60,7 @@ Slide work experience
 }
 
 .workexperience__timeline > li > .description {
-    color: rgba(32, 32, 32, 1);
+    color: var(--text);
     font-size: 28px;
     font-weight: bold;
 
@@ -115,6 +115,6 @@ Slide work experience
 
 .workexperience__details__list dd {
     font-size: 1.625rem;
-    color: rgba(32, 32, 32, 1);
+    color: var(--text);
     line-height: 3.25rem;
 }

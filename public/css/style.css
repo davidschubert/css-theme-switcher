@@ -87,7 +87,7 @@ html {
   --gray3: #6c7983;
   --gray4: #454e56;
   --gray5: #2a2e35;
-  --gray6: #12181b;
+  --gray6: #202020;
   --blue: #0084a5;
   --purple: #a82dd1;
   --yellow: #fff565;
@@ -111,6 +111,8 @@ html {
   --text: var(--gray6);
   --border-color: var(--blue);
   --bg-solar: var(--yellow);
+  /* slide hello */
+  --c-mirror-bg1: #FFC3B7;
   /* slide clients */
   --icon-color-clients: #202020;
   --bg-color-clients: rgba(219,237,243, 1);
@@ -124,6 +126,8 @@ html {
   --text: var(--gray0);
   --border-color: var(--purple);
   --bg-solar: var(--blue);
+  /* slide hello */
+  --c-mirror-bg1: #202020;
   /* slide clients */
   --icon-color-clients: #DBEDF3;
   --bg-color-clients: rgba(10,10,10, 1);
@@ -157,7 +161,58 @@ html {
 }
 
 /* FONTS */
-/* TYPOGRAPHY */
+/* Monument Extended */
+@font-face {
+  font-family: 'Monument Extended Thin';
+  font-style: normal;
+  font-weight: 100;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Thin.eot");
+  src: local("Monument Extended Thin"), url("../fonts/Monument Extended/MonumentExtended-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Thin.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Thin.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument Extended Light';
+  font-style: normal;
+  font-weight: 300;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Light.eot");
+  src: local("Monument Extended Light"), url("../fonts/Monument Extended/MonumentExtended-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Light.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Light.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument Extended';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Regular.eot");
+  src: local("Monument Extended"), url("../fonts/Monument Extended/MonumentExtended-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Regular.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Regular.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument Extended Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Bold.eot");
+  src: local("Monument Extended Bold"), url("../fonts/Monument Extended/MonumentExtended-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Bold.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Bold.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument Extended Black';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Black.eot");
+  src: local("Monument Extended Black"), url("../fonts/Monument Extended/MonumentExtended-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Black.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Black.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Black.ttf") format("truetype");
+}
+
+/* General */
 :root {
   --main-font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen",
@@ -171,40 +226,48 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3, h4, h5, h6, .display-1 {
+  font-family: 'Monument Extended Black', Arial;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* TYPOGRAPHY */
+/* Headings */
 h1 {
   color: var(--text);
-  font-size: 48px;
+  font-size: 3rem;
   letter-spacing: -1.77px;
   text-align: center;
 }
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 48px;
+    font-size: 4rem;
   }
 }
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 80px;
+    font-size: 5rem;
   }
 }
 
 @media (min-width: 992px) {
   h1 {
-    font-size: 110px;
+    font-size: 6rem;
   }
 }
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 110px;
+    font-size: 8rem;
   }
 }
 
 @media (min-width: 1400px) {
   h1 {
-    font-size: 10em;
+    font-size: 10rem;
   }
 }
 
@@ -239,6 +302,48 @@ p {
     color: #0000ff;
     font-size: 25px;
     line-height: 40px;
+  }
+}
+
+/* Display headings */
+.display-1 {
+  font-weight: 300;
+  font-size: 7.81vw;
+  line-height: 9.37vw;
+}
+
+@media (min-width: 576px) {
+  .display-1 {
+    font-size: 7.81vw;
+    line-height: 9.37vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-1 {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .display-1 {
+    font-size: 5.625rem;
+    line-height: 6.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 6.25rem;
+    line-height: 6.875rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .display-1 {
+    font-size: 9.375rem;
+    line-height: 10.31rem;
   }
 }
 
@@ -809,7 +914,7 @@ ul.listsymbol__gap li::before {
 }
 
 .navbar .navbar-list li:not(:last-child) {
-  margin-right: 4em;
+  margin-right: 1em;
 }
 
 /* Navbar/Dropdown */
@@ -823,20 +928,20 @@ ul.listsymbol__gap li::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   margin-top: 27px;
   padding: 1rem;
-  width: 170px;
+  max-width: 320px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.075), 0 4px 4px rgba(0, 0, 0, 0.075), 0 8px 8px rgba(0, 0, 0, 0.075), 0 16px 16px rgba(0, 0, 0, 0.075);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.075), 0 4px 4px rgba(0, 0, 0, 0.075), 0 8px 8px rgba(0, 0, 0, 0.075), 0 16px 16px rgba(0, 0, 0, 0.075);
-  -webkit-transform: translateX(-1rem);
-          transform: translateX(-1rem);
+  -webkit-transform: translateX(-13rem);
+          transform: translateX(-13rem);
   -webkit-transition: opacity .15s ease-out;
   transition: opacity .15s ease-out;
 }
@@ -965,8 +1070,6 @@ header.hero {
 }
 
 header.hero .cta {
-  background-color: #fff;
-  color: #1d1d1f;
   margin-top: 25px;
 }
 
@@ -1068,7 +1171,7 @@ header .glassbutton {
 
 /* SLIDE HELLO */
 #hello {
-  background-color: #FFC3B7;
+  background-color: var(--c-mirror-bg1);
   background-image: none;
 }
 
@@ -1144,7 +1247,7 @@ ul.contact-list li a:active {
 Slide work experience
 ***/
 #workexperience {
-  background-color: #DBEDF3;
+  background-color: var(--bg-color-clients);
   background-image: none;
 }
 
@@ -1155,7 +1258,7 @@ Slide work experience
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: 0.25rem;
-  color: #202020;
+  color: var(--text);
   margin: 0 0 4rem 0;
   padding: 0;
   display: inline-block;
@@ -1167,7 +1270,7 @@ Slide work experience
 }
 
 .workexperience__timeline > li {
-  border-bottom: 1px solid #cadce2;
+  border-bottom: 1px solid var(--border-color-clients);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1212,7 +1315,7 @@ Slide work experience
 }
 
 .workexperience__timeline > li > .description {
-  color: #202020;
+  color: var(--text);
   font-size: 28px;
   font-weight: bold;
   -ms-grid-row: 1;
@@ -1296,7 +1399,7 @@ Slide work experience
 
 .workexperience__details__list dd {
   font-size: 1.625rem;
-  color: #202020;
+  color: var(--text);
   line-height: 3.25rem;
 }
 
