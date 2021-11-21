@@ -68,36 +68,36 @@ header.hero {
     /* Unsplash Image */
     //background-image: url('https://source.unsplash.com/bQEhoSB7JZc/2560x1440');
     
-    background-image: url("../img/homepage/main/cover_small.jpg");
+    background-image: url("../img/homepage/header/cover_small.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     // ≥768px
     @include md {
-        background-image: url("../img/homepage/main/cover_medium.jpg");
+        background-image: url("../img/homepage/header/cover_medium.jpg");
     }
 
     // ≥992px
     @include lg {
-        background-image: url("../img/homepage/main/cover_large.jpg");
+        background-image: url("../img/homepage/header/cover_large.jpg");
     }
 }
 
 .webp header.cover {
-    background-image: url("../img/homepage/main/cover_small.webp");
+    background-image: url("../img/homepage/header/cover_small.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     // ≥768px
     @include md {
-        background-image: url("../img/homepage/main/cover_medium.webp");
+        background-image: url("../img/homepage/header/cover_medium.webp");
     }
 
     // ≥992px
     @include lg {
-        background-image: url("../img/homepage/main/cover_large.webp");
+        background-image: url("../img/homepage/header/cover_large.webp");
     }
 }
 
