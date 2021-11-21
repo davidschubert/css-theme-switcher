@@ -227,7 +227,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .display-1 {
-  font-family: 'Monument Extended Black', Arial;
+  font-family: 'Monument Extended Black', 'Helvetica Neue', Arial;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -1075,7 +1075,7 @@ header.hero .cta {
 
 .no-webp header.cover {
   /* Unsplash Image */
-  background-image: url("../img/homepage/main/cover_small.jpg");
+  background-image: url("../img/homepage/header/cover_small.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1083,18 +1083,18 @@ header.hero .cta {
 
 @media (min-width: 768px) {
   .no-webp header.cover {
-    background-image: url("../img/homepage/main/cover_medium.jpg");
+    background-image: url("../img/homepage/header/cover_medium.jpg");
   }
 }
 
 @media (min-width: 992px) {
   .no-webp header.cover {
-    background-image: url("../img/homepage/main/cover_large.jpg");
+    background-image: url("../img/homepage/header/cover_large.jpg");
   }
 }
 
 .webp header.cover {
-  background-image: url("../img/homepage/main/cover_small.webp");
+  background-image: url("../img/homepage/header/cover_small.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1102,13 +1102,13 @@ header.hero .cta {
 
 @media (min-width: 768px) {
   .webp header.cover {
-    background-image: url("../img/homepage/main/cover_medium.webp");
+    background-image: url("../img/homepage/header/cover_medium.webp");
   }
 }
 
 @media (min-width: 992px) {
   .webp header.cover {
-    background-image: url("../img/homepage/main/cover_large.webp");
+    background-image: url("../img/homepage/header/cover_large.webp");
   }
 }
 
