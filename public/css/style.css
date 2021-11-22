@@ -99,11 +99,17 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
+    --brand: var(--brand-dark);
+    --text: var(--text-dark);
+    --bg1: var(--bg1-dark);
+    --surface1: var(--surface1-dark);
     --main-bg-color: darkblue;
     --main-text-color: lightblue;
   }
 }
 
+/* Modes */
 .lightmode {
   --bg: var(--gray0);
   --bg-nav: rgba(255, 255, 255, .72);
@@ -384,7 +390,7 @@ a {
 }
 
 /* section */
-section {
+.slide {
   overflow: hidden;
   min-height: 520px;
   margin: 0 auto;
@@ -401,37 +407,37 @@ section {
 }
 
 @media (min-width: 576px) {
-  section {
+  .slide {
     color: #ff0000;
   }
 }
 
 @media (min-width: 768px) {
-  section {
+  .slide {
     color: #00ff00;
   }
 }
 
 @media (min-width: 992px) {
-  section {
+  .slide {
     color: #0000ff;
     padding: 140px 160px;
   }
 }
 
 @media (min-width: 1200px) {
-  section {
+  .slide {
     color: #00ffff;
   }
 }
 
 @media (min-width: 1400px) {
-  section {
+  .slide {
     color: #ff00ff;
   }
 }
 
-header, section:not(:last-child), .clients {
+header, .slide:not(:last-child), .clients {
   border-bottom-color: var(--bg);
   border-bottom-style: solid;
   border-bottom-width: 12px;
@@ -1247,12 +1253,12 @@ ul.contact-list li a:active {
 Slide work experience
 ***/
 #workexperience {
-  background-color: var(--bg-color-clients);
   background-image: none;
+  background-color: var(--bg-color-clients);
+  /* Slide Container */
 }
 
-/* Slide Container */
-#workexperience > .container > h2 {
+#workexperience .container > h2 {
   text-align: left;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -1269,7 +1275,7 @@ Slide work experience
   margin: 0 0 8rem 0;
 }
 
-.workexperience__timeline > li {
+.workexperience__timeline li {
   border-bottom: 1px solid var(--border-color-clients);
   display: -ms-grid;
   display: grid;
@@ -1281,7 +1287,7 @@ Slide work experience
 }
 
 @media (min-width: 1200px) {
-  .workexperience__timeline > li {
+  .workexperience__timeline li {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr (1fr)[3];
@@ -1294,7 +1300,7 @@ Slide work experience
   }
 }
 
-.workexperience__timeline > li > .years {
+.workexperience__timeline li .years {
   color: rgba(32, 32, 32, 0.7);
   font-size: 26px;
   -ms-grid-row: 1;
@@ -1305,7 +1311,7 @@ Slide work experience
 }
 
 @media (min-width: 1200px) {
-  .workexperience__timeline > li > .years {
+  .workexperience__timeline li .years {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
@@ -1314,7 +1320,7 @@ Slide work experience
   }
 }
 
-.workexperience__timeline > li > .description {
+.workexperience__timeline li .description {
   color: var(--text);
   font-size: 28px;
   font-weight: bold;
@@ -1326,7 +1332,7 @@ Slide work experience
 }
 
 @media (min-width: 1200px) {
-  .workexperience__timeline > li > .description {
+  .workexperience__timeline li .description {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 2;
@@ -1336,7 +1342,7 @@ Slide work experience
 }
 
 /* Second Part */
-.workexperience__details {
+.workexperience__definition {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1351,7 +1357,7 @@ Slide work experience
 }
 
 @media (min-width: 576px) {
-  .workexperience__details {
+  .workexperience__definition {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -1364,7 +1370,7 @@ Slide work experience
 }
 
 @media (min-width: 1200px) {
-  .workexperience__details {
+  .workexperience__definition {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[4];
@@ -1377,7 +1383,7 @@ Slide work experience
 }
 
 /* Definition List */
-.workexperience__details__list {
+.workexperience__definition__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1390,14 +1396,14 @@ Slide work experience
           justify-content: flex-start;
 }
 
-.workexperience__details__list dt {
+.workexperience__definition__list .definition__term {
   color: rgba(32, 32, 32, 0.7);
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   padding-bottom: 2.5rem;
 }
 
-.workexperience__details__list dd {
+.workexperience__definition__list .description {
   font-size: 1.625rem;
   color: var(--text);
   line-height: 3.25rem;
@@ -1713,6 +1719,7 @@ html.is-locked body {
   transition: opacity 0.5s;
 }
 
+/* SLIDE HTML ELEMENTS */
 /*************
 SLIDE CSS GRID
 *************/

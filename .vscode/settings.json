@@ -1,3 +1,32 @@
 {
-    "compile-hero.disable-compile-files-on-did-save-code": true
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "cSpell.words": [
+        "Absatz",
+        "ansehen",
+        "Awwwards",
+        "behance",
+        "Cheatsheet",
+        "Computertext",
+        "Designmodo",
+        "dribbble",
+        "einem",
+        "Globale",
+        "Gmail",
+        "Hier",
+        "horizontales",
+        "Impressum",
+        "kommt",
+        "lange",
+        "Lokale",
+        "loremipsum",
+        "Modul",
+        "Pinterest",
+        "Satz",
+        "Scrollverhalten",
+        "SELFHTML",
+        "steht",
+        "Techcrunch",
+        "Trello",
+        "viewbox"
+    ]
 }

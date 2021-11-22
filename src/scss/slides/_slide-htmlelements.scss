@@ -1,0 +1,41 @@
+/* SLIDE HTML ELEMENTS */
+
+#htmlelements {
+
+}
+
+:root {
+    accent-color: deeppink;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        accent-color: hsl(328 100% 65%);
+    }
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+b {
+    color: deeppink;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    block-size: 100%;
+    color-scheme: light dark;
+}
