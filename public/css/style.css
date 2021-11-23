@@ -65,6 +65,16 @@ html {
 
 /* Themes */
 :root {
+  --brand-color: #f95361;
+  accent-color: var(--brand-color);
+  --akzentfarbe-1: #f95361;
+  --akzentfarbe-2: #29fc7d;
+  --akzentfarbe-3: #eeee22;
+  --akzentfarbe-4: #00d084;
+  --akzentfarbe-5: #b19c67;
+  --akzentfarbe-6: #5f9dd3;
+  --akzentfarbe-7: #43db8f;
+  --akzentfarbe-8: #f95339;
   --main-bg-blur: saturate(180%) blur(16px);
   --main-bg-color: lightblue;
   --main-text-color: darkblue;
@@ -100,6 +110,7 @@ html {
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
+    accent-color: var(--brand-color);
     --brand: var(--brand-dark);
     --text: var(--text-dark);
     --bg1: var(--bg1-dark);
@@ -107,6 +118,45 @@ html {
     --main-bg-color: darkblue;
     --main-text-color: lightblue;
   }
+}
+
+/* Akzentfarbe für HTML Elemente */
+html {
+  --brand: hotpink;
+  scrollbar-color: hotpink Canvas;
+}
+
+:root {
+  accent-color: var(--brand);
+}
+
+:focus-visible {
+  outline-color: var(--brand);
+}
+
+::-moz-selection {
+  background-color: var(--brand);
+}
+
+::selection {
+  background-color: var(--brand);
+}
+
+::marker {
+  color: var(--brand);
+}
+
+::-webkit-calendar-picker-indicator {
+  color: var(--brand);
+}
+
+::-webkit-clear-button {
+  color: var(--brand);
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  color: var(--brand);
 }
 
 /* Modes */
@@ -212,6 +262,8 @@ html {
   font-family: 'Monument Extended Black';
   font-style: normal;
   font-weight: 900;
+  size-adjust: 130%;
+  ascent-override: 100%;
   font-display: swap;
   /* or block, swap, fallback, optional */
   src: url("../fonts/Monument Extended/MonumentExtended-Black.eot");
@@ -245,6 +297,7 @@ h1 {
   font-size: 3rem;
   letter-spacing: -1.77px;
   text-align: center;
+  background-color: rgba(0, 255, 255, 0.3);
 }
 
 @media (min-width: 576px) {
@@ -361,6 +414,7 @@ p {
 
 html {
   -webkit-text-size-adjust: 100%;
+  block-size: 100%;
 }
 
 body {
@@ -1720,6 +1774,173 @@ html.is-locked body {
 }
 
 /* SLIDE HTML ELEMENTS */
+b {
+  color: var(--brand-color);
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 4rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.xyz {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+}
+
+/* Range: default vs accent-color */
+.accented {
+  accent-color: var(--brand-color);
+}
+
+[color-scheme="dark"] .accented {
+  accent-color: var(--brand-color);
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1rem;
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+fieldset {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset[color-scheme="dark"] {
+  background: black;
+  color: white;
+}
+
+/* Radio */
+[color-scheme="dark"] .accented {
+  accent-color: var(--brand-color);
+}
+
+.radio-lg {
+  --size: 2rem;
+  block-size: var(--size);
+  inline-size: var(--size);
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+fieldset {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset[color-scheme="dark"] {
+  background: black;
+  color: white;
+}
+
+/* Checkbox */
+.accented {
+  accent-color: var(--brand-color);
+}
+
+[color-scheme="dark"] .accented {
+  accent-color: var(--brand-color);
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1rem;
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+fieldset {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset[color-scheme="dark"] {
+  background: black;
+  color: white;
+}
+
 /*************
 SLIDE CSS GRID
 *************/

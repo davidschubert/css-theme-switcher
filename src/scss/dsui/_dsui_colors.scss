@@ -6,6 +6,18 @@ html {
 
 /* Themes */
 :root {
+    --brand-color: #f95361;
+    accent-color: var(--brand-color);
+
+    --akzentfarbe-1: #f95361;
+    --akzentfarbe-2: #29fc7d;
+    --akzentfarbe-3: #eeee22;
+    --akzentfarbe-4: #00d084;
+    --akzentfarbe-5: #b19c67;
+    --akzentfarbe-6: #5f9dd3;
+    --akzentfarbe-7: #43db8f;
+    --akzentfarbe-8: #f95339;
+
     --main-bg-blur: saturate(180%) blur(16px);
 
     --main-bg-color: lightblue;
@@ -51,6 +63,8 @@ html {
     :root {
         color-scheme: dark;
 
+        accent-color: var(--brand-color);
+
         --brand: var(--brand-dark);
         --text: var(--text-dark);
         --bg1: var(--bg1-dark);
@@ -60,6 +74,31 @@ html {
         --main-text-color: lightblue;
     }
 }
+
+/* Akzentfarbe für HTML Elemente */
+html { 
+    --brand: hotpink;
+    scrollbar-color: hotpink Canvas;
+}
+
+:root { accent-color: var(--brand); }
+:focus-visible { outline-color: var(--brand); }
+::selection { background-color: var(--brand); }
+::marker { color: var(--brand); }
+
+::-webkit-calendar-picker-indicator {
+    color: var(--brand);
+}
+
+::-webkit-clear-button {
+    color: var(--brand);
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    color: var(--brand);
+}
+
 
 
 /* Modes */

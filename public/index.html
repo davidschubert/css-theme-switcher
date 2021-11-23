@@ -235,14 +235,15 @@
             <div class="content-container">
                 <h2>HTML Elements</h2>
                 
-                <div>
-                    <h1><b>Accent</b> Color</h1>
-                    <small>Tint built-in HTML elements</small>
-                </div>
+                <h3><b>Akzent</b>farbe</h3>
+                <small>Tint built-in HTML elements</small>
 
                 <label>
                     Checkbox
-                    <input type="checkbox" checked>
+                    <fieldset>
+                        <input type="checkbox" checked>
+                        <input type="checkbox">
+                    </fieldset>
                 </label>
 
                 <label>
@@ -261,8 +262,121 @@
 
                 <label>
                     Progress element
-                    <progress max="100" value="50">50%</progress>
+                    <progress max="100" value="70">70%</progress>
                 </label>
+
+                <div class="xyz">
+                    <h3>Special Input elements</h3>
+                    <input type="date">
+                    <input type="number" min=0 max=10 value=0>
+                    <input type="text" list="animals" placeholder="Animals">
+                    <input type="search" list="animals" placeholder="Search...">
+
+                    <details>
+                    <summary>Details</summary>
+                    <p>Peek-a-boo</p>
+                    </details>
+
+                    <ul>
+                    <li>This</li>
+                    <li>Is</li>
+                    <li>A</li>
+                    <li>List</li>
+                    </ul>
+
+                    <datalist id="animals">
+                    <option>Dog</option>
+                    <option>Cat</option>
+                    <option>Spider</option>
+                    </datalist>
+                </div>
+
+                <div class="xyz">
+                    <h3>Range: default vs accent-color</h3>
+                    <fieldset color-scheme="light">
+                        <label>
+                            Default
+                            <input type="range">
+                        </label>
+                        <label class="accented">
+                            Tinted
+                            <input type="range">
+                        </label>
+                    </fieldset>
+
+                    <fieldset color-scheme="dark">
+                        <label>
+                            Default
+                            <input type="range">
+                        </label>
+                        <label class="accented">
+                            Tinted
+                            <input type="range">
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="xyz">
+                    <h3>Radio: default vs accent-color</h3>
+                    <fieldset color-scheme="light">
+                        <label>
+                            Default
+                            <input class="radio-lg" type="radio" name="default-demo-light" checked>
+                            <input class="radio-lg" type="radio" name="default-demo-light">
+                            <input class="radio-lg" type="radio" name="default-demo-light">
+                    </label>
+
+                        <label class="accented">
+                            Tinted
+                            <input class="radio-lg" type="radio" name="accented-demo-light" checked>
+                            <input class="radio-lg" type="radio" name="accented-demo-light">
+                            <input class="radio-lg" type="radio" name="accented-demo-light">
+                        </label>
+                    </fieldset>
+
+                    <fieldset color-scheme="dark">
+                        <label>
+                            Default
+                            <input class="radio-lg" type="radio" name="default-demo-dark" checked>
+                            <input class="radio-lg" type="radio" name="default-demo-dark">
+                            <input class="radio-lg" type="radio" name="default-demo-dark">
+                        </label>
+
+                        <label class="accented">
+                            Tinted
+                            <input class="radio-lg" type="radio" name="accented-demo-dark" checked>
+                            <input class="radio-lg" type="radio" name="accented-demo-dark">
+                            <input class="radio-lg" type="radio" name="accented-demo-dark">
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="xyz">
+                    <h3>Checkbox: default vs accent-color</h3>
+                    <fieldset color-scheme="light">
+                        <label for="default-light">
+                            Default
+                            <input class="radio-lg" type="checkbox" id="default-light" checked>
+                        </label>
+
+                        <label for="accented-light">
+                            Tinted
+                            <input class="radio-lg" class="accented" type="checkbox" id="accented-light" checked>
+                        </label>
+                    </fieldset>
+
+                    <fieldset color-scheme="dark">
+                        <label for="default-dark">
+                            Default
+                            <input class="radio-lg" type="checkbox" id="default-dark" checked>
+                        </label>
+
+                        <label for="accented-dark">
+                            Tinted
+                            <input class="radio-lg" class="accented" type="checkbox" id="accented-dark" checked>
+                        </label>
+                    </fieldset>
+                </div>
 
             </div>
            

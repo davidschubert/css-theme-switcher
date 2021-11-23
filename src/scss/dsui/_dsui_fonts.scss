@@ -57,6 +57,10 @@
     font-family: 'Monument Extended Black';
     font-style: normal;
     font-weight: 900;
+
+    size-adjust: 130%;
+    ascent-override: 100%;
+
     font-display: swap; /* or block, swap, fallback, optional */
     src: url("../fonts/Monument Extended/MonumentExtended-Black.eot");
     src: local('Monument Extended Black'),
