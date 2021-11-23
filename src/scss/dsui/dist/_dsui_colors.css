@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* COLORS */
+html {
+  color-scheme: light dark;
+}
+
+/* Themes */
+:root {
+  --brand-color: #f95361;
+  accent-color: var(--brand-color);
+  --akzentfarbe-1: #f95361;
+  --akzentfarbe-2: #29fc7d;
+  --akzentfarbe-3: #eeee22;
+  --akzentfarbe-4: #00d084;
+  --akzentfarbe-5: #b19c67;
+  --akzentfarbe-6: #5f9dd3;
+  --akzentfarbe-7: #43db8f;
+  --akzentfarbe-8: #f95339;
+  --main-bg-blur: saturate(180%) blur(16px);
+  --main-bg-color: lightblue;
+  --main-text-color: darkblue;
+  --c-bg: yellow;
+  --c-text: darkblue;
+  --c-linktext: blue;
+  --c-visitedtext: purple;
+  --c-activetext: red;
+  --c-border: green;
+  --c-buttonface: gray;
+  --c-buttontext: black;
+  --c-buttonborder: lightgray;
+  --c-field: yellow;
+  --c-fieldtext: darkblue;
+  --main-color: red;
+  --background: rgba(85, 214, 170, .85);
+  --gray0: #f8f8f8;
+  --gray1: #dbe1e8;
+  --gray2: #b2becd;
+  --gray3: #6c7983;
+  --gray4: #454e56;
+  --gray5: #2a2e35;
+  --gray6: #202020;
+  --blue: #0084a5;
+  --purple: #a82dd1;
+  --yellow: #fff565;
+  /* slide clients */
+  --icon-color-clients: var(--gray2);
+  --bg-color-clients: var(--gray6);
+  --border-color-clients: var(--gray5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    accent-color: var(--brand-color);
+    --brand: var(--brand-dark);
+    --text: var(--text-dark);
+    --bg1: var(--bg1-dark);
+    --surface1: var(--surface1-dark);
+    --main-bg-color: darkblue;
+    --main-text-color: lightblue;
+  }
+}
+/* Akzentfarbe für HTML Elemente */
+html {
+  --brand: hotpink;
+  scrollbar-color: hotpink Canvas;
+}
+
+:root {
+  accent-color: var(--brand);
+}
+
+:focus-visible {
+  outline-color: var(--brand);
+}
+
+::selection {
+  background-color: var(--brand);
+}
+
+::marker {
+  color: var(--brand);
+}
+
+::-webkit-calendar-picker-indicator {
+  color: var(--brand);
+}
+
+::-webkit-clear-button {
+  color: var(--brand);
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  color: var(--brand);
+}
+
+/* Modes */
+.lightmode {
+  --bg: var(--gray0);
+  --bg-nav: rgba(255, 255, 255, .72);
+  --bg-dropdown: var(--gray0);
+  --text: var(--gray6);
+  --border-color: var(--blue);
+  --bg-solar: var(--yellow);
+  /* slide hello */
+  --c-mirror-bg1: #FFC3B7;
+  /* slide clients */
+  --icon-color-clients: #202020;
+  --bg-color-clients: rgba(219,237,243, 1);
+  --border-color-clients: #C4D4DA;
+}
+
+.darkmode {
+  --bg: var(--gray5);
+  --bg-nav: rgba(29, 29, 31, .72);
+  --bg-dropdown: var(--gray6);
+  --text: var(--gray0);
+  --border-color: var(--purple);
+  --bg-solar: var(--blue);
+  /* slide hello */
+  --c-mirror-bg1: #202020;
+  /* slide clients */
+  --icon-color-clients: #DBEDF3;
+  --bg-color-clients: rgba(10,10,10, 1);
+  --border-color-clients: #1F1F1F;
+}
+
+.solar {
+  --gray0: #fbffd4;
+  --gray1: #f7f8d0;
+  --gray2: #b6f880;
+  --gray3: #5ec72d;
+  --gray4: #3ea565;
+  --gray5: #005368;
+  --gray6: #003d4c;
+  /* slide clients */
+  --icon-color-clients: var(--text);
+  --bg-color-clients: var(--bg-solar);
+  --border-color-clients: var(--border-color);
+}
+
+#darkmode::before {
+  background: #2a2e35;
+}
+
+#lightmode::before {
+  background: #ffffff;
+}
+
+#solar::before {
+  background: var(--bg-solar);
+}
