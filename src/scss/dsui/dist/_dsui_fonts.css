@@ -47,6 +47,15 @@
   src: url("../fonts/Monument Extended/MonumentExtended-Black.eot");
   src: local("Monument Extended Black"), url("../fonts/Monument Extended/MonumentExtended-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Black.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Black.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Black.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Monument Extended Variable";
+  src: url("../fonts/Monument Extended/MonumentExtended-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 100%;
+}
 /* General */
 :root {
   --main-font-family: "Sofia Pro", -apple-system, BlinkMacSystemFont,
@@ -62,7 +71,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .display-1 {
-  font-family: "Monument Extended Black", "Helvetica Neue", Arial;
-  font-weight: 900;
+  font-family: "Monument Extended Variable", "Monument Extended Black", "Helvetica Neue", Arial;
+  font-variation-settings: "wght" 900;
   text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.display-1:hover {
+  font-variation-settings: "wght" 400;
 }
