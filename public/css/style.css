@@ -262,7 +262,7 @@ html {
   font-family: 'Monument Extended Black';
   font-style: normal;
   font-weight: 900;
-  size-adjust: 130%;
+  size-adjust: 100%;
   ascent-override: 100%;
   font-display: swap;
   /* or block, swap, fallback, optional */
@@ -273,6 +273,16 @@ html {
 @font-face {
   font-family: 'Monument Extended Variable';
   src: url("../fonts/Monument Extended/MonumentExtended-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 100%;
+}
+
+@font-face {
+  font-family: 'Gotik';
+  src: url("../fonts/Gotik/gotik.ttf") format("truetype");
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -296,14 +306,26 @@ body {
 
 h1, h2, h3, h4, h5, h6, .display-1 {
   font-family: 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
-  font-variation-settings: "wght" 444;
+  font-variation-settings: "wght" 900;
   text-transform: uppercase;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: font-variation-settings .2s ease-in-out;
+  transition: font-variation-settings .2s ease-in-out;
 }
 
 .display-1:hover {
-  font-variation-settings: "wght" 111;
+  font-variation-settings: "wght" 400;
+}
+
+.display-2 {
+  font-family: 'Gotik', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
+  font-variation-settings: "wght" 900;
+  text-transform: uppercase;
+  -webkit-transition: font-variation-settings .2s ease-in-out;
+  transition: font-variation-settings .2s ease-in-out;
+}
+
+.display-2:hover {
+  font-variation-settings: "wght" 400;
 }
 
 /* TYPOGRAPHY */

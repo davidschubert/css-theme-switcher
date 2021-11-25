@@ -53,7 +53,7 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  size-adjust: 100%;
+  size-adjust: 130%;
   ascent-override: 100%;
 }
 /* General */
@@ -72,11 +72,11 @@ body {
 
 h1, h2, h3, h4, h5, h6, .display-1 {
   font-family: "Monument Extended Variable", "Monument Extended Black", "Helvetica Neue", Arial;
-  font-variation-settings: "wght" 444;
+  font-variation-settings: "wght" 900;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
+  transition: font-variation-settings 0.2s ease-in-out;
 }
 
 .display-1:hover {
-  font-variation-settings: "wght" 111;
+  font-variation-settings: "wght" 100;
 }
