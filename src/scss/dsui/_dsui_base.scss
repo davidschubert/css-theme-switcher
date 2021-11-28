@@ -24,15 +24,16 @@ a {
 }
 
 /* main */
-
-.main_2560 {
-    max-width: 2560px;
+main {
     margin: 0 auto;
 }
 
-.main_full {
+.main-2560 {
+    max-width: 2560px;
+}
+
+.main-full {
     width: 100%;
-    margin: 0 auto;
 }
 
 /* section */
@@ -46,7 +47,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
 
     // ≥576px
     @include sm {
@@ -128,4 +128,21 @@ header, .slide:not(:last-child), .clients {
 input[type="password"] {
     font-family: Verdana;
     letter-spacing: 0.125em;
+}
+
+/* Custom scroll bar */
+body {
+    overflow: overlay;
+  }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FD0202;
 }

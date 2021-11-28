@@ -179,11 +179,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &.stickynav {
-        position: sticky;
-        top: 0;
-    }
 }
 
-
+.stickynav {
+    top: 0;
+    position: sticky;
+}

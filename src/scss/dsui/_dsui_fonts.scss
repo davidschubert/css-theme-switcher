@@ -61,6 +61,10 @@
     size-adjust: 100%;
     ascent-override: 100%;
 
+    descent-override: 0%;
+    ascent-override: 66%;
+    line-gap-override: 3%;
+
     font-display: swap; /* or block, swap, fallback, optional */
     src: url("../fonts/Monument Extended/MonumentExtended-Black.eot");
     src: local('Monument Extended Black'),
@@ -78,6 +82,10 @@
     font-display: swap;
     size-adjust: 100%;
     ascent-override: 100%;
+
+    descent-override: 0%;
+    ascent-override: 66%;
+    line-gap-override: 3%;
 }
 
 @font-face {
@@ -87,7 +95,10 @@
     font-weight: 100 900;
     font-display: swap;
     size-adjust: 100%;
-    ascent-override: 100%;
+
+    descent-override: 0%;
+    ascent-override: 66%;
+    line-gap-override: 3%;
 }
 
 /* General */
@@ -106,24 +117,59 @@ body {
 
 h1, h2, h3, h4, h5, h6, .display-1 {
     font-family: 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
-    font-variation-settings: "wght" 900;
+    line-height: 1;
+    text-align: center;
+    transform: translateZ(0);
+    font-variation-settings: "wght" 350;
     text-transform: uppercase;
 
-    transition: font-variation-settings .2s ease-in-out;
+    //transition: font-variation-settings .3s ease-in-out;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    animation: variableDemo 5s ease-in-out infinite;
+    animation-play-state: running;
 }
 
-.display-1:hover {
-    font-variation-settings: "wght" 400;
-}
+// .display-1:hover {
+//     font-variation-settings: "wght" 350;
+// }
 
 .display-2 {
     font-family: 'Gotik', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
-    font-variation-settings: "wght" 900;
+    line-height: 1;
+    text-align: center;
+    transform: translateZ(0);
+    font-variation-settings: "wght" 350;
     text-transform: uppercase;
 
-    transition: font-variation-settings .2s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    animation: variableDemo 5s ease-in-out infinite;
+    animation-play-state: running;
+
+    &.is-inview {
+        animation-play-state: running;
+    }
+
 }
 
-.display-2:hover {
-    font-variation-settings: "wght" 400;
+// .display-2:hover {
+//     font-variation-settings: "wght" 350;
+// }
+
+@keyframes variableDemo {
+    0% {
+        font-variation-settings: "wght" 900;
+    }
+    50% {
+        font-variation-settings: "wght" 100;
+    }
+    100% {
+        font-variation-settings: "wght" 900;
+    }
 }
