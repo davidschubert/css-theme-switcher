@@ -16,6 +16,8 @@ body {
     overflow-y: scroll;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    // Stop the bouncing effect when hit the top or bottom
+    overscroll-behavior: none;
 }
 
 a {
