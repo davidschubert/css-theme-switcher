@@ -1,0 +1,55 @@
+/* Monument Extended */
+@font-face {
+  font-family: 'Monument Extended Thin';
+  font-style: normal;
+  font-weight: 100;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Thin.eot");
+  src: local("Monument Extended Thin"), url("../fonts/Monument Extended/MonumentExtended-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Thin.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Thin.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument Extended Light';
+  font-style: normal;
+  font-weight: 300;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Light.eot");
+  src: local("Monument Extended Light"), url("../fonts/Monument Extended/MonumentExtended-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Light.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Light.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument Extended';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Regular.eot");
+  src: local("Monument Extended"), url("../fonts/Monument Extended/MonumentExtended-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Regular.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Regular.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument Extended Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Bold.eot");
+  src: local("Monument Extended Bold"), url("../fonts/Monument Extended/MonumentExtended-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Bold.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Bold.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument Extended Black';
+  font-style: normal;
+  font-weight: 900;
+  size-adjust: 100%;
+  ascent-override: 100%;
+  descent-override: 0%;
+  ascent-override: 66%;
+  line-gap-override: 3%;
+  font-display: swap;
+  /* or block, swap, fallback, optional */
+  src: url("../fonts/Monument Extended/MonumentExtended-Black.eot");
+  src: local("Monument Extended Black"), url("../fonts/Monument Extended/MonumentExtended-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Monument Extended/MonumentExtended-Black.woff2") format("woff2"), url("../fonts/Monument Extended/MonumentExtended-Black.woff") format("woff"), url("../fonts/Monument Extended/MonumentExtended-Black.ttf") format("truetype");
+}

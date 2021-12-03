@@ -1,5 +1,9 @@
 /* CUSTOM CURSOR */
 
+body {
+    cursor: grab;
+}
+
 @keyframes cursor_farbwechsel {
     0% {
         //filter: hue-rotate(0deg);
@@ -59,7 +63,7 @@
     transition-property:background-color,opacity,transform,mix-blend-mode;
 }
 
-/*#ds-cursor:before{
+/*#ds-cursor:before {
     content: '';
     position: absolute;
     width: 50px;
@@ -73,3 +77,20 @@
     backdrop-filter: blur(16px);
 }*/
 
+a:hover, button:hover {
+    cursor: grabbing;
+
+    #ds-cursor {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+*:active {
+    cursor: grabbing;
+
+    #ds-cursor {
+        width: 32px;
+        height: 32px;
+    }
+}

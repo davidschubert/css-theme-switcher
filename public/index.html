@@ -23,12 +23,9 @@
 
     <link rel="preload" href="fonts/Monument Extended/MonumentExtended-Black.ttf" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Monument Extended/MonumentExtended-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Gotik/gotik.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Inter/Inter.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="img/homepage/header/cover_large.webp" as="image">
-    <link rel="preload" href="img/homepage/header/cover_medium.webp" as="image">
-    <link rel="preload" href="img/homepage/header/cover_small.webp" as="image">
-    <link rel="preload" href="img/homepage/header/cover_large.jpg" as="image">
-    <link rel="preload" href="img/homepage/header/cover_medium.jpg" as="image">
-    <link rel="preload" href="img/homepage/header/cover_small.jpg" as="image">
     <!--<link rel="canonical" href="https://www.davidschubert.com/">-->
 </head>
 <body class="lightmode">
@@ -44,6 +41,8 @@
         <h1 class="display-1">Awesome Headline</h1>
         <br>
         <h1 class="display-2">Awesome Headline</h1>
+        <br>
+        <h1 class="display-3">Love.<br>Share.<br>Protect.</h1>
 
         <!--<button class="btn btn-glass btn-sm cta">Small Button</button>
         <button class="btn btn-glass cta">Normal Button</button>
@@ -96,7 +95,7 @@
 
             <div class="content-container">
                 <h2 class="roofline">Hello everyone</h2>
-                <p class="hellomsg">The biggest event of the year for creatives from all across the country. Be there as the design community comes together for provocative speakers, nightly networking receptions. <a href="#">hello@loremipsum dolor.com</a></p>
+                <p class="hellomsg">My name is David. I’m a German he/him living in Hamburg, Germany. The internet is the medium through which I express myself. The biggest event of the year for creatives from all across the country. Be there as the design community comes together for provocative speakers, nightly networking receptions. <a href="#">hello@loremipsum dolor.com</a></p>
                 <ul class="contact-list">
                     <li><a href="#">email</a></li>
                     <li><a href="#">facebook</a></li>
@@ -487,11 +486,12 @@
         
     </main>
 
-    <footer>
-        <address>© 1998-2013 SELFHTML <a href="#">Impressum</a> Software: Classic Forum 3.4</address>
-        <hr>
+    <footer id="ds-globalfooter">
+        <p class="signature">Let's work together</p>
+        <p class="signature signature__email"><a href="mailto:mail@davidschubert.com">mail@davidschubert.com</a></p>
+        <div class="signature__image"><img width="240" height="64" src="img/homepage/footer/signature.svg" alt="Signatur"></div>
         <nav id="footernav" aria-label="Footer navigation">
-            <ul>
+            <ul class="footernav-list">
                 <li><a href="#">facebook</a></li>
                 <li><a href="#">instagram</a></li>
                 <li><a href="#">behance</a></li>

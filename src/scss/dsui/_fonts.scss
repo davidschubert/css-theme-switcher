@@ -1,0 +1,93 @@
+/* FONTS */
+@import 'fonts/monument-extended';
+@import 'fonts/monument-extended-variable';
+@import 'fonts/gotik';
+@import 'fonts/inter';
+
+/* General */
+:root {
+    --main-font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    font-family: var(--main-font-family);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .display-1 {
+    font-family: 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
+    line-height: 1;
+    text-align: center;
+    transform: translateZ(0);
+    font-variation-settings: "wght" 900;
+    text-transform: uppercase;
+
+    //transition: font-variation-settings .3s ease-in-out;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    // animation: variableDemo 5s ease-in-out infinite;
+    // animation-play-state: running;
+}
+
+// .display-1:hover {
+//     font-variation-settings: "wght" 350;
+// }
+
+.display-2 {
+    font-family: 'Gotik', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
+    line-height: 1;
+    text-align: center;
+    transform: translateZ(0);
+    font-variation-settings: "wght" 900;
+    text-transform: uppercase;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    // animation: variableDemo 5s ease-in-out infinite;
+    // animation-play-state: running;
+}
+
+// .display-2:hover {
+//     font-variation-settings: "wght" 350;
+// }
+
+@keyframes variableDemo {
+    0% {
+        font-variation-settings: "wght" 900;
+    }
+    50% {
+        font-variation-settings: "wght" 350;
+    }
+    100% {
+        font-variation-settings: "wght" 900;
+    }
+}
+
+.display-3 {
+    font-family: 'Inter', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
+    line-height: 1;
+    text-align: center;
+    transform: translateZ(0);
+    font-variation-settings: "wght" 900;
+    text-transform: none;
+    
+    font-size: 11vw;
+    letter-spacing: -0.05em;
+    line-height: .95;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    // animation: variableDemo 5s ease-in-out infinite;
+    // animation-play-state: running;
+}

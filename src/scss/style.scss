@@ -1,41 +1,42 @@
 /* Reset everything */
-@import 'dsui/dsui_myreset';
+@import 'base/reset';
 
 /* DS UI Library */
-@import 'dsui/dsui_breakpoints';
-@import 'dsui/dsui_mixins';
-@import 'dsui/dsui_colors';
-@import 'dsui/dsui_fonts';
-@import 'dsui/dsui_typography';
-@import 'dsui/dsui_icons';
-@import 'dsui/dsui_base';
-@import 'dsui/dsui_images';
-@import 'dsui/dsui_buttons';
-@import 'dsui/dsui_forms';
-@import 'dsui/dsui_tabs';
-@import 'dsui/dsui_banner';
-@import 'dsui/dsui_card';
-@import 'dsui/dsui_list';
-@import 'dsui/dsui_dropdown';
-@import 'dsui/dsui_customcursor';
+@import 'dsui/breakpoints';
+@import 'dsui/mixins';
+@import 'dsui/colors';
+@import 'dsui/fonts';
+@import 'dsui/typography';
+
+@import 'dsui/icons';
+@import 'dsui/base';
+@import 'dsui/images';
+@import 'dsui/buttons';
+@import 'dsui/forms';
+@import 'dsui/tabs';
+@import 'dsui/banner';
+@import 'dsui/card';
+@import 'dsui/list';
+@import 'dsui/dropdown';
 
 /* Extras */
-// @import 'dsui/extra_details_summary';
-@import 'extras/extras_horizontal-smooth-parallax-slider';
+@import 'extras/customcursor';
+@import 'extras/details_summary';
+@import 'extras/horizontal-smooth-parallax-slider';
 
 /* Slides */
-@import 'slides/slide-navbar';
-@import 'slides/slide-hero';
-@import 'slides/slide-hello';
-@import 'slides/slide-projects';
-@import 'slides/slide-workexperience';
-@import 'slides/slide-clients';
-@import 'slides/slide-htmlhacks';
-@import 'slides/slide-htmlelements';
-@import 'slides/slide-cssgrid';
-@import 'slides/slide-horizontal-scrolling';
-@import 'slides/slide-button-hover-effect';
-@import 'slides/slide-footer';
+@import 'slides/navbar';
+@import 'slides/hero';
+@import 'slides/hello';
+@import 'slides/projects';
+@import 'slides/workexperience';
+@import 'slides/clients';
+@import 'slides/htmlhacks';
+@import 'slides/htmlelements';
+@import 'slides/cssgrid';
+@import 'slides/horizontal-scrolling';
+@import 'slides/button-hover-effect';
+@import 'slides/footer';
 
 /* Debugging */
 //@import 'dsui/dsui_debugging';
