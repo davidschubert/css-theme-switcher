@@ -1,7 +1,7 @@
 /* SLIDE NAVIGATION */
 
 :root {
-    --ds-globalnav-height: 70px;
+    --ds-globalnav-height: 86px;
     --ds-localnav-height: 52px;
     --ds-localnav-marginbottom: calc((var(--ds-globalnav-height) + var(--ds-localnav-height)) * -1);
 }
@@ -34,7 +34,7 @@
         padding-right: calc(max(22px, env(safe-area-inset-right)));
 
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: stretch;
 
         /* Brand Logo */
@@ -97,10 +97,11 @@
         align-items: center;
         justify-content: space-evenly;
         height: 100%;
+        column-gap: 1.5rem;
 
-        li:not(:last-child) {
-            margin-right: 1em;
-        }
+        // .nav-item:not(:last-child) {
+        //     margin-right: 1em;
+        // }
     }
 }
 

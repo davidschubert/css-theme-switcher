@@ -11,7 +11,8 @@
 
 .signature {
     text-align: center;
-    font-family: 'Inter';
+    font-family: 'Sofia Pro', 'Inter';
+    font-weight: 600;
     font-size: 54px;
     line-height: 65px;
     font-variation-settings: "wght" 900;
@@ -25,13 +26,80 @@
     p a {
         overflow: hidden;
     }
-
-    a:hover {
-        color: var(--bg-solar);
-    }
     
     a:active {
         color: var(--border-color);
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-link);
+        color: #202020;
+        outline: none;
+    }
+
+    a:hover {
+        color: var(--color-link-hover);
+        color: green;
+        outline: none;
+    }
+
+    a:-webkit-any-link:focus-visible {
+        outline-offset: 1px;
+    }
+
+    a:focus {
+        outline: none;
+        background: lightgrey;
+    }
+
+    a:focus-visible {
+        outline: 2px solid red;
+        background: transparent;
+    }
+
+    a:focus:not(:focus-visible) {
+        background: transparent;
+    }
+
+    .link {
+        cursor: pointer;
+        font-size: 18px;
+        position: relative;
+        white-space: nowrap;
+        color: var(--color-text);
+        -webkit-text-stroke: 0.2px;
+    }
+
+    .link::before,
+    .link::after {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        top: 100%;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .link::before {
+        content: '';
+    }
+
+    .link--metis {
+        font-family: bely-display, sans-serif;
+        text-transform: lowercase;
+    }
+
+    .link--metis::before {
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: transform .4s;
+    }
+
+    .link--metis:hover::before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
     }
 }
 

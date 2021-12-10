@@ -68,6 +68,22 @@ html {
 
 /* Themes */
 :root {
+  --color-primary: #d53061;
+  --color-primary-light: #df6388;
+  --color-primary-dark: #881e3e;
+  --color-primary-extra-light: #e997af;
+  --color-secondary-light: #3c3c3c;
+  --color-secondary-dark: #2e2e2e;
+  --color-tertiary-light: #daa520;
+  --color-tertiary-dark: #ffd700;
+  --color-grey-light-1: #f7f7f7;
+  --color-grey-light-2: #eeeeee;
+  --color-grey-dark-1: #777777;
+  --color-grey-dark-2: #999;
+  --color-grey-dark-3: #333;
+  --color-white: #F1F1F1;
+  --color-black: #222222;
+  /* Next part */
   --brand-color: #f95361;
   accent-color: var(--brand-color);
   --akzentfarbe-1: #f95361;
@@ -313,12 +329,25 @@ html {
   line-gap-override: 3%;
 }
 
-/* General */
+@font-face {
+  font-family: 'Helvetica Now Variable';
+  src: url("../fonts/Helvetica Now/HelveticaNowVar.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 50 1000;
+  font-display: swap;
+  size-adjust: 100%;
+  descent-override: 0%;
+  ascent-override: 66%;
+  line-gap-override: 3%;
+}
+
+/* Default */
 :root {
   --main-font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
+  --default-font-size: 1rem;
 }
 
 body {
@@ -327,8 +356,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6, .display-1 {
-  font-family: 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+.display-1 {
+  font-family: 'Helvetica Now Variable', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Now Variable', 'Helvetica Neue', Arial;
   line-height: 1;
   text-align: center;
   -webkit-transform: translateZ(0);
@@ -341,7 +376,7 @@ h1, h2, h3, h4, h5, h6, .display-1 {
 }
 
 .display-2 {
-  font-family: 'Gotik', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
+  font-family: 'Gotik', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Now Variable', 'Helvetica Neue', Arial;
   line-height: 1;
   text-align: center;
   -webkit-transform: translateZ(0);
@@ -378,22 +413,31 @@ h1, h2, h3, h4, h5, h6, .display-1 {
 }
 
 .display-3 {
-  font-family: 'Inter', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
+  font-family: 'Helvetica Now Variable', 'Inter', 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Neue', Arial;
   line-height: 1;
-  text-align: center;
+  text-align: left;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
-  font-variation-settings: "wght" 900;
+  font-variation-settings: "wght" 800;
   text-transform: none;
   font-size: 11vw;
-  letter-spacing: -0.05em;
-  line-height: .95;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 /* TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizelegibility;
+}
+
 /* Headings */
 h1 {
   color: var(--text);
@@ -461,7 +505,6 @@ p {
 
 @media (min-width: 992px) {
   p {
-    color: #0000ff;
     font-size: 25px;
     line-height: 40px;
   }
@@ -507,6 +550,17 @@ p {
     font-size: 9.375rem;
     line-height: 10.31rem;
   }
+}
+
+/* GRID */
+/* DEFAULT */
+:root {
+  --border-radius-xsmall: 2px;
+  --border-radius-small: 3px;
+  --grid-width: 114rem;
+  --gap-vertical: 8rem;
+  --gap-vertical-small: 6rem;
+  --gap-horizontal: 6rem;
 }
 
 /* ICONS */
@@ -1039,9 +1093,23 @@ a:hover #ds-cursor, button:hover #ds-cursor {
 }
 
 /* Slides */
+/* SLIDE HOMEPAGE */
+.homepage {
+  /* positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* box model */
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  /* visual */
+  background-color: orange;
+}
+
 /* SLIDE NAVIGATION */
 :root {
-  --ds-globalnav-height: 70px;
+  --ds-globalnav-height: 86px;
   --ds-localnav-height: 52px;
   --ds-localnav-marginbottom: calc((var(--ds-globalnav-height) + var(--ds-localnav-height)) * -1);
 }
@@ -1078,9 +1146,9 @@ a:hover #ds-cursor, button:hover #ds-cursor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -1173,10 +1241,8 @@ a:hover #ds-cursor, button:hover #ds-cursor {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 100%;
-}
-
-.navbar .navbar-list li:not(:last-child) {
-  margin-right: 1em;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
 }
 
 /* Navbar/Dropdown */
@@ -2381,7 +2447,8 @@ https://www.youtube.com/watch?v=v37JcsRddBs
 
 .signature {
   text-align: center;
-  font-family: 'Inter';
+  font-family: 'Sofia Pro', 'Inter';
+  font-weight: 600;
   font-size: 54px;
   line-height: 65px;
   font-variation-settings: "wght" 900;
@@ -2397,12 +2464,86 @@ https://www.youtube.com/watch?v=v37JcsRddBs
   overflow: hidden;
 }
 
-.signature__email a:hover {
-  color: var(--bg-solar);
-}
-
 .signature__email a:active {
   color: var(--border-color);
+}
+
+.signature__email a {
+  text-decoration: none;
+  color: var(--color-link);
+  color: #202020;
+  outline: none;
+}
+
+.signature__email a:hover {
+  color: var(--color-link-hover);
+  color: green;
+  outline: none;
+}
+
+.signature__email a:-webkit-any-link:focus-visible {
+  outline-offset: 1px;
+}
+
+.signature__email a:focus {
+  outline: none;
+  background: lightgrey;
+}
+
+.signature__email a:focus-visible {
+  outline: 2px solid red;
+  background: transparent;
+}
+
+.signature__email a:focus:not(:focus-visible) {
+  background: transparent;
+}
+
+.signature__email .link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  color: var(--color-text);
+  -webkit-text-stroke: 0.2px;
+}
+
+.signature__email .link::before,
+.signature__email .link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.signature__email .link::before {
+  content: '';
+}
+
+.signature__email .link--metis {
+  font-family: bely-display, sans-serif;
+  text-transform: lowercase;
+}
+
+.signature__email .link--metis::before {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.signature__email .link--metis:hover::before {
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
 }
 
 .signature__image {

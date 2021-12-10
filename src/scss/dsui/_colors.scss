@@ -6,6 +6,28 @@ html {
 
 /* Themes */
 :root {
+    --color-primary: #d53061;
+    --color-primary-light: #df6388;
+    --color-primary-dark: #881e3e;
+    --color-primary-extra-light: #e997af;
+
+    --color-secondary-light: #3c3c3c;
+    --color-secondary-dark: #2e2e2e;
+
+    --color-tertiary-light: #daa520;
+    --color-tertiary-dark: #ffd700;
+
+    --color-grey-light-1: #f7f7f7;
+    --color-grey-light-2: #eeeeee;
+
+    --color-grey-dark-1: #777777;
+    --color-grey-dark-2: #999;
+    --color-grey-dark-3: #333;
+
+    --color-white: #F1F1F1;
+    --color-black: #222222;
+
+    /* Next part */
     --brand-color: #f95361;
     accent-color: var(--brand-color);
 

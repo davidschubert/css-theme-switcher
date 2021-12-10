@@ -7,6 +7,7 @@
 @import 'dsui/colors';
 @import 'dsui/fonts';
 @import 'dsui/typography';
+@import 'dsui/grid';
 
 @import 'dsui/icons';
 @import 'dsui/base';
@@ -25,6 +26,7 @@
 @import 'extras/horizontal-smooth-parallax-slider';
 
 /* Slides */
+@import 'slides/homepage';
 @import 'slides/navbar';
 @import 'slides/hero';
 @import 'slides/hello';

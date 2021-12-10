@@ -1,0 +1,14 @@
+/* SLIDE HOMEPAGE */
+
+.homepage {
+    /* positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* box model */
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    /* visual */
+    background-color: orange;
+}
