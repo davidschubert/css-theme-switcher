@@ -361,14 +361,13 @@ h2,
 h3,
 h4,
 h5,
-h6
+h6,
 .display-1 {
   font-family: 'Monument Extended Variable', 'Monument Extended Black', 'Helvetica Now Variable', 'Helvetica Neue', Arial;
   line-height: 1;
   text-align: center;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
-  font-variation-settings: "wght" 900;
   text-transform: uppercase;
   overflow: hidden;
   white-space: nowrap;
@@ -421,8 +420,9 @@ h6
   font-variation-settings: "wght" 800;
   text-transform: none;
   font-size: 11vw;
-  letter-spacing: -0.02em;
-  line-height: 0.9;
+  letter-spacing: -0.011em;
+  line-height: 1;
+  word-spacing: 0.15em;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
