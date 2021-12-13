@@ -1,0 +1,14 @@
+.solar {
+    --gray0: #fbffd4;
+    --gray1: #f7f8d0;
+    --gray2: #b6f880;
+    --gray3: #5ec72d;
+    --gray4: #3ea565;
+    --gray5: #005368;
+    --gray6: #003d4c;
+
+    /* slide clients */
+    --icon-color-clients: var(--text);
+    --bg-color-clients: var(--bg-solar);
+    --border-color-clients: var(--border-color);
+}

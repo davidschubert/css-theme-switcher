@@ -8,8 +8,13 @@ const body = document.body;
 const theme = localStorage.getItem('theme');
 const isSolar = localStorage.getItem('isSolar');
 
-if (theme) {
-  body.classList.add('theme');
+if (theme && theme == 'darkmode') {
+  //alert("Theme aus dem local Storage: " + theme);
+  body.classList.replace('lightmode', 'darkmode');
+}
+
+if (isSolar && isSolar == 'true') {
+  //alert("isSolar aus dem local Storage: " + isSolar);
   isSolar && body.classList.add('solar');
 }
 
@@ -45,3 +50,19 @@ solarButton.onclick = () => {
     localStorage.setItem('isSolar', true);
   }
 };
+
+
+/* Themes Switcher über Select Box */
+const setTheme = theme => body.classList.add(theme);
+ 
+document.getElementById('appearance-select').addEventListener('change', function() {
+  body.classList.replace('lightmode', 'darkmode');
+  setTheme(this.value);
+});
+
+document.getElementById('accent-color-select').addEventListener('change', function() {
+  body.classList.replace('solar', 'riviera');
+  setTheme(this.value);
+});
+
+/* Store User Choice in Local Storage */

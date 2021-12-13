@@ -126,6 +126,7 @@ html {
   --border-color-clients: var(--gray5);
 }
 
+/* Setting Theme According to User Preferences */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -178,7 +179,7 @@ html {
   color: var(--brand);
 }
 
-/* Modes */
+/* IMPORT MAIN THEMES */
 .lightmode {
   --bg: var(--gray0);
   --bg-nav: rgba(255, 255, 255, .72);
@@ -233,6 +234,27 @@ html {
 
 #solar::before {
   background: var(--bg-solar);
+}
+
+/* IMPORT EXTRA THEMES */
+.riviera {
+  --bg: #FF8B8B;
+  --text: #9C2525;
+  --headline-color: #F9F8E6;
+  --akzent: #F9F8E6;
+  /* slide clients */
+  --icon-color-clients: var(--headline-color);
+  --bg-color-clients: var(--bg);
+  --border-color-clients: var(--text);
+}
+
+#theme-select {
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--bg);
+  color: var(--text);
+  border-radius: 0.25rem;
 }
 
 /* FONTS */
@@ -575,9 +597,9 @@ html {
 }
 
 body {
-  background: var(--bg);
-  -webkit-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
-  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  background-color: var(--bg);
+  -webkit-transition: background-color 500ms ease-in-out, color 1000ms ease-in-out;
+  transition: background-color 500ms ease-in-out, color 1000ms ease-in-out;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
@@ -1318,9 +1340,9 @@ a:hover #ds-cursor, button:hover #ds-cursor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

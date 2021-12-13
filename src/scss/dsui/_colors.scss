@@ -1,5 +1,4 @@
 /* COLORS */
-
 html {
     color-scheme: light dark;
 }
@@ -81,6 +80,7 @@ html {
     --border-color-clients: var(--gray5);
 }
 
+/* Setting Theme According to User Preferences */
 @media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
@@ -122,65 +122,25 @@ html {
 }
 
 
+/* IMPORT MAIN THEMES */
+@import 'themes/lightmode';
+@import 'themes/darkmode';
+@import 'themes/solar';
 
-/* Modes */
-.lightmode {
-    --bg: var(--gray0);
-    --bg-nav: rgba(255, 255, 255, .72);
-    --bg-dropdown: var(--gray0);
-    --text: var(--gray6);
-    --border-color: var(--blue);
-    --bg-solar: var(--yellow);
+#darkmode::before { background: #2a2e35; }
+#lightmode::before { background: #ffffff; }
+#solar::before { background: var(--bg-solar); }
 
-    /* slide hello */
-    --c-mirror-bg1: #FFC3B7;
+/* IMPORT EXTRA THEMES */
+@import 'themes/riviera';
 
-    /* slide clients */
-    --icon-color-clients: #202020;
-    --bg-color-clients: rgba(219,237,243, 1);
-    --border-color-clients: #C4D4DA;
-}
 
-.darkmode {
-    --bg: var(--gray5);
-    --bg-nav: rgba(29, 29, 31, .72);
-    --bg-dropdown: var(--gray6);
-    --text: var(--gray0);
-    --border-color: var(--purple);
-    --bg-solar: var(--blue);
 
-    /* slide hello */
-    --c-mirror-bg1: #202020;
-
-    /* slide clients */
-    --icon-color-clients: #DBEDF3;
-    --bg-color-clients: rgba(10,10,10, 1);
-    --border-color-clients: #1F1F1F;
-}
-
-.solar {
-    --gray0: #fbffd4;
-    --gray1: #f7f8d0;
-    --gray2: #b6f880;
-    --gray3: #5ec72d;
-    --gray4: #3ea565;
-    --gray5: #005368;
-    --gray6: #003d4c;
-
-    /* slide clients */
-    --icon-color-clients: var(--text);
-    --bg-color-clients: var(--bg-solar);
-    --border-color-clients: var(--border-color);
-}
-
-#darkmode::before {
-    background: #2a2e35;
-}
-
-#lightmode::before {
-    background: #ffffff;
-}
-
-#solar::before {
-    background: var(--bg-solar);
+#theme-select {
+    padding: 0.25rem 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--bg);
+    color: var(--text);
+    border-radius: 0.25rem;
 }
