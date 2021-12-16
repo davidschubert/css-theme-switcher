@@ -18,6 +18,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     // Stop the bouncing effect when hit the top or bottom
     overscroll-behavior: none;
+    text-rendering: geometricPrecision;
 }
 
 a {

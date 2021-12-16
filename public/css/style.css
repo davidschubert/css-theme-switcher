@@ -353,7 +353,7 @@ html {
 
 @font-face {
   font-family: 'Helvetica Now Variable';
-  src: url("../fonts/Helvetica Now/HelveticaNowVar.woff2") format("woff2");
+  src: url("../fonts/Helvetica Now/HelveticaNowVar.woff2") format("woff2-variations");
   font-style: normal;
   font-weight: 50 1000;
   font-display: swap;
@@ -605,6 +605,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
+  text-rendering: geometricPrecision;
 }
 
 a {
